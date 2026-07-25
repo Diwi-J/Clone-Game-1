@@ -130,6 +130,8 @@ GameObject:
   - component: {fileID: 592768092}
   - component: {fileID: 592768091}
   - component: {fileID: 592768093}
+  - component: {fileID: 592768094}
+  - component: {fileID: 592768095}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -182,6 +184,33 @@ MonoBehaviour:
     day: 11
     month: 6
     year: 2048
+--- !u!114 &592768094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592768090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bda2af02b10454997f05383f4ee6da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecisionTest
+  npc: {fileID: 11400000, guid: 810603c21554d584bbaac89444e81ace, type: 2}
+  decisionManager: {fileID: 592768095}
+--- !u!114 &592768095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592768090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a818a81e30771d44b94bb45332cbd70a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DecisionManager
+  documentVerification: {fileID: 592768093}
 --- !u!1 &864081757
 GameObject:
   m_ObjectHideFlags: 0
