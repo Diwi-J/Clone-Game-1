@@ -38,6 +38,15 @@ namespace Core.UI
             }
         }
 
+        private void Start()
+        {
+            // Auto-present the first applicant if testing directly in Play Mode
+            if (CurrentNPC == null && todayApplicantQueue != null && todayApplicantQueue.Count > 0)
+            {
+                PresentNextApplicant();
+            }
+        }
+
         /// <summary>
         /// Set queue of applicants for the current day.
         /// </summary>

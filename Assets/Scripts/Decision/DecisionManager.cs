@@ -7,18 +7,6 @@ public class DecisionManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private DocumentVerification documentVerification;
 
-    private void Awake()
-    {
-        if (documentVerification == null)
-        {
-            documentVerification = FindFirstObjectByType<DocumentVerification>();
-            if (documentVerification == null)
-            {
-                documentVerification = gameObject.AddComponent<DocumentVerification>();
-            }
-        }
-    }
-
     public DecisionResults ProcessDecision(NPCData npc, PlayerDecision playerDecision)
     {
         DecisionResults result = new DecisionResults();
@@ -33,12 +21,7 @@ public class DecisionManager : MonoBehaviour
             return result;
         }
 
-        if (documentVerification == null)
-        {
-            documentVerification = FindFirstObjectByType<DocumentVerification>();
-        }
-
-        List<string> discrepancies = documentVerification != null ? documentVerification.VerifyNPC(npc) : new List<string>();
+        List<string> discrepancies = documentVerification.VerifyNPC(npc);
 
         result.correctDecision = DetermineCorrectDecision(npc, discrepancies);
 

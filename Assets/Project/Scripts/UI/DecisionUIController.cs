@@ -32,6 +32,15 @@ namespace Core.UI
 
         private bool isProcessingDecision = false;
 
+        private void Start()
+        {
+            // Hide feedback banner by default on start
+            if (feedbackBanner != null)
+            {
+                feedbackBanner.SetActive(false);
+            }
+        }
+
         private void OnEnable()
         {
             if (acceptButton != null) acceptButton.onClick.AddListener(OnAcceptClicked);
@@ -70,16 +79,14 @@ namespace Core.UI
 
             if (decisionManager == null)
             {
-                decisionManager = FindFirstObjectByType<DecisionManager>();
-                if (decisionManager == null)
-                {
-                    Debug.LogError("[DecisionUIController] DecisionManager reference is missing!");
-                    return;
-                }
+                Debug.LogError("[DecisionUIController] DecisionManager reference is missing in scene!");
+                return;
             }
 
             isProcessingDecision = true;
             SetButtonsInteractable(false);
+
+            Debug.Log($"[DecisionUIController] Processing decision '{decision}' for NPC: {currentNPC.FullName}");
 
             DecisionResults result = decisionManager.ProcessDecision(currentNPC, decision);
             ApplyDecisionToGameData(result);
@@ -134,7 +141,7 @@ namespace Core.UI
                 {
                     feedbackText.color = Color.green;
                     feedbackText.text = result.playerDecision == PlayerDecision.Kill ?
-                        "THREAT NEUTRALIZED! (Skinwalker Terminated)" : "PASSED - CORRECT DECISION";
+                        "THREAT NEUTRALIZED!\n(Skinwalker Terminated)" : "PASSED - CORRECT DECISION";
                 }
                 else
                 {
@@ -142,10 +149,10 @@ namespace Core.UI
                     switch (result.outcome)
                     {
                         case DecisionOutcome.HumanKilled:
-                            feedbackText.text = "CIVILIAN KILLED! Severe Fine Applied!";
+                            feedbackText.text = "CIVILIAN KILLED!\nSevere Fine Applied!";
                             break;
                         case DecisionOutcome.SkinwalkerAccepted:
-                            feedbackText.text = "SKINWALKER BREACH! Threat Entered City!";
+                            feedbackText.text = "SKINWALKER BREACH!\nThreat Entered City!";
                             break;
                         default:
                             feedbackText.text = "INCORRECT DECISION!";
