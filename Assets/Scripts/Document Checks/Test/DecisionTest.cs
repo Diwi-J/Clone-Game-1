@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Used ChatGPT to debug input errors and update the keyboard input to Unity's new input system
 public class DecisionTest : MonoBehaviour
 {
     [Header("NPC To Test")]
