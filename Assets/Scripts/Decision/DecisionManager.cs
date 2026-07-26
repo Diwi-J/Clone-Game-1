@@ -1,12 +1,23 @@
 using System.Collections.Generic;
 using NUnit.Framework;
-using Unity.Android.Types;
 using UnityEngine;
 
 public class DecisionManager : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private DocumentVerification documentVerification;
+
+    private void Awake()
+    {
+        if (documentVerification == null)
+        {
+            documentVerification = FindFirstObjectByType<DocumentVerification>();
+            if (documentVerification == null)
+            {
+                documentVerification = gameObject.AddComponent<DocumentVerification>();
+            }
+        }
+    }
 
     public DecisionResults ProcessDecision(NPCData npc, PlayerDecision playerDecision)
     {
@@ -22,7 +33,12 @@ public class DecisionManager : MonoBehaviour
             return result;
         }
 
-        List<string> discrepancies = documentVerification.VerifyNPC(npc);
+        if (documentVerification == null)
+        {
+            documentVerification = FindFirstObjectByType<DocumentVerification>();
+        }
+
+        List<string> discrepancies = documentVerification != null ? documentVerification.VerifyNPC(npc) : new List<string>();
 
         result.correctDecision = DetermineCorrectDecision(npc, discrepancies);
 
