@@ -171,22 +171,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
-      propertyPath: Data.RentDue
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
-      propertyPath: Data.FoodCost
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
-      propertyPath: Data.HeatCost
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
-      propertyPath: Data.MedicineCost
-      value: 5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
