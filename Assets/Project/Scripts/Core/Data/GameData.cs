@@ -39,8 +39,8 @@ namespace Core.Data
         public DayPhase CurrentPhase = DayPhase.MainMenu;
 
         [Header("Economy")]
-        public int CurrentMoney = 0;
-        public int RentDue = 0;
+        public int CurrentMoneyAmount = 0;
+        public int RentCost = 0;
         public int HeatCost = 0;
         public int FoodCost = 0;
         public int MedicineCost = 0;

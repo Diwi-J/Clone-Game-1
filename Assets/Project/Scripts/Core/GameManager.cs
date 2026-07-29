@@ -56,6 +56,9 @@ namespace Core
         [Tooltip("Raised whenever CurrentMoney changes, via AddMoney(). Payload = the new total.")]
         public IntEventChannelSO OnMoneyChanged;
 
+        [Tooltip("Raised whenever FamilyHealth changes, via OnFamilyHealthChanged. PayLoad = new value.")]
+        public IntEventChannelSO OnFamilyHealthChanged;
+
         public GameStateMachine StateMachine { get; private set; }
 
         private void Awake()
@@ -141,8 +144,14 @@ namespace Core
         
         public void AddMoney(int amount)
         {
-            Data.CurrentMoney += amount;
-            OnMoneyChanged?.Raise(Data.CurrentMoney);
+            Data.CurrentMoneyAmount += amount;
+            OnMoneyChanged?.Raise(Data.CurrentMoneyAmount);
+        }
+
+        public void ChangeFamilyHealth(int amount)
+        {
+            Data.FamilyHealth = Mathf.Clamp(Data.FamilyHealth +  amount, 0, 100);
+            OnFamilyHealthChanged?.Raise(Data.FamilyHealth);
         }
         #endregion 
     }
