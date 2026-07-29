@@ -29,6 +29,7 @@ namespace Core.UI
         [SerializeField] private int skinwalkerKillBonus = 100;
         [SerializeField] private int innocentKillPenalty = -100;
         [SerializeField] private int skinwalkerEscapedPenalty = -100;
+        
 
         private bool isProcessingDecision = false;
 
@@ -107,7 +108,7 @@ namespace Core.UI
                 if (result.playerDecision == PlayerDecision.Kill)
                 {
                     data.SkinwalkersTerminatedToday++;
-                    GameManager.Instance.AddMoney(correctDecisionSalary + skinwalkerKillBonus);
+                   GameManager.Instance.AddMoney(correctDecisionSalary + skinwalkerKillBonus);
                 }
                 else
                 {

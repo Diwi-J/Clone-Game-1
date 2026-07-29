@@ -929,69 +929,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'DOB: ---'
---- !u!1 &592768090
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 592768092}
-  - component: {fileID: 592768093}
-  - component: {fileID: 592768095}
-  m_Layer: 0
-  m_Name: Tester
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &592768092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592768090}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &592768093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592768090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 22e4549f0e01cd4469cca4eedd2ce5f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DocumentVerification
-  currentDate:
-    day: 11
-    month: 6
-    year: 2048
-  dayManager: {fileID: 1952096457}
---- !u!114 &592768095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 592768090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a818a81e30771d44b94bb45332cbd70a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DecisionManager
-  documentVerification: {fileID: 592768093}
 --- !u!1 &602881118
 GameObject:
   m_ObjectHideFlags: 0
@@ -2148,7 +2085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24fae2738fd00547a37dc27e1fceb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DecisionUIController
-  decisionManager: {fileID: 592768095}
+  decisionManager: {fileID: 0}
   deskCanvasManager: {fileID: 1174451095}
   acceptButton: {fileID: 1420159460}
   rejectButton: {fileID: 1720196464}
@@ -3527,7 +3464,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1952096459}
-  - component: {fileID: 1952096458}
   - component: {fileID: 1952096457}
   - component: {fileID: 1952096456}
   - component: {fileID: 1952096460}
@@ -3570,43 +3506,6 @@ MonoBehaviour:
   onDayStarted: {fileID: 11400000, guid: fa53d73b67812674b996beb3c2609c7e, type: 2}
   onDayEndStarted: {fileID: 11400000, guid: decaa7d111fab4047bfaa2ac1eee2d80, type: 2}
   homeCountry: Meowland
---- !u!114 &1952096458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1952096455}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58fa4ba6bf250a04aa3f056354999982, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Core.GameManager
-  Data:
-    CurrentDay: 1
-    CurrentPhase: 1
-    CurrentMoney: 0
-    RentDue: 0
-    HeatCost: 0
-    FoodCost: 0
-    MedicineCost: 0
-    ApplicantsProcessedToday: 0
-    CorrectDecisionsToday: 0
-    WrongDecisionsToday: 0
-    SkinwalkersTerminatedToday: 0
-    SkinwalkersMissedToday: 0
-    InnocentsTerminatedToday: 0
-    FamilyHealth: 100
-    IsGameOver: 0
-    GameOverReason: 
-    CurrentDirectives: 
-  OnDayStarted: {fileID: 11400000, guid: fa53d73b67812674b996beb3c2609c7e, type: 2}
-  OnQueueStarted: {fileID: 11400000, guid: ec1e8c857ab499246b99d2682ed4f270, type: 2}
-  OnQueueEmpty: {fileID: 11400000, guid: f2290b49735eaba4ebd0805e652122bb, type: 2}
-  OnDayEndStarted: {fileID: 11400000, guid: decaa7d111fab4047bfaa2ac1eee2d80, type: 2}
-  OnDayResolved: {fileID: 11400000, guid: 97112a415a567634a81a2b8b25086c29, type: 2}
-  OnGameOver: {fileID: 11400000, guid: 329b882ec25f62046a1bb37629115d10, type: 2}
-  OnMoneyChanged: {fileID: 11400000, guid: 77ffda1656316b3419093c1b7dbc23a3, type: 2}
 --- !u!4 &1952096459
 Transform:
   m_ObjectHideFlags: 0
@@ -4196,7 +4095,6 @@ Transform:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 592768092}
   - {fileID: 2140429515}
   - {fileID: 768882943}
   - {fileID: 1952096459}
