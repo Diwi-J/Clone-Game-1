@@ -8,7 +8,7 @@ public class DayManager : MonoBehaviour
     [Header("Event Channels")]
     [SerializeField] private VoidEventChannelSO onDayStarted;
     [SerializeField] private VoidEventChannelSO onDayEndStarted;
-    [SerializeField] private string homeCountry = "Arstotzka";
+    [SerializeField] private string homeCountry = "Meowland";
 
     public string HomeCountry => homeCountry;
 
@@ -32,11 +32,26 @@ public class DayManager : MonoBehaviour
         if (onDayStarted != null) onDayStarted.OnEventRaised -= HandleDayStarted;
     }
 
-    private void HandleDayStarted()
+    /*private void HandleDayStarted()
     {
         Debug.Log($"Day {CurrentDay} started");
         CurrentDirectives = Directives.GetDirectives(CurrentDay);
 
+    }
+    */
+
+    private void HandleDayStarted()
+    {
+        int currentDay =
+            GameManager.Instance.Data.CurrentDay;
+
+        List<DirectiveType> directives =
+            Directives.GetDirectives(currentDay);
+
+        GameManager.Instance.Data.CurrentDirectives =
+            directives;
+
+        Debug.Log($"Loaded {directives.Count} directives for Day {currentDay}.");
     }
 
     private void HandleDayEndStarted()

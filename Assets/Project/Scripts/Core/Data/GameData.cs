@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 namespace Core.Data
 {
@@ -60,6 +61,9 @@ namespace Core.Data
         [Header("Session")]
         public bool IsGameOver = false;
         public string GameOverReason = "";
+
+        [Header("Daily Directives")]
+        public List<DirectiveType> CurrentDirectives = new List<DirectiveType>();
 
         /// <summary>
         /// Call at the start of every new day (DayStartState does this automatically) to
