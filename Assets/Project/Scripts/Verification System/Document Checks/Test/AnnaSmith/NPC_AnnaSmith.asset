@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_AnnaSmith
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Anna
+  lastName: Smith
+  dateOfBirth:
+    day: 16
+    month: 3
+    year: 2023
+  nationality: Meowland
+  sex: 1
+  portrait: {fileID: 0}
+  heightCm: 170
+  weightCm: 65
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: p-313145
+  isSkinwalker: 0
+  identificationDocument: {fileID: 11400000, guid: 9396f058d38962e408bc69f7f3e98936, type: 2}
+  entryPermit: {fileID: 0}
+  supportingDocument: {fileID: 0}
