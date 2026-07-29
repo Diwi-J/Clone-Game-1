@@ -211,8 +211,111 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1952096455
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1952096459}
+  - component: {fileID: 1952096458}
+  - component: {fileID: 1952096457}
+  - component: {fileID: 1952096456}
+  m_Layer: 0
+  m_Name: Managers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1952096456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22e4549f0e01cd4469cca4eedd2ce5f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DocumentVerification
+  currentDate:
+    day: 1
+    month: 1
+    year: 0
+  dayManager: {fileID: 0}
+--- !u!114 &1952096457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a660875306bab9344b81bb762891b320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DayManager
+  onDayStarted: {fileID: 0}
+  onDayEndStarted: {fileID: 0}
+  homeCountry: Meowland
+--- !u!114 &1952096458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58fa4ba6bf250a04aa3f056354999982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.GameManager
+  Data:
+    CurrentDay: 1
+    CurrentPhase: 0
+    CurrentMoney: 0
+    RentDue: 0
+    HeatCost: 0
+    FoodCost: 0
+    MedicineCost: 0
+    ApplicantsProcessedToday: 0
+    CorrectDecisionsToday: 0
+    WrongDecisionsToday: 0
+    SkinwalkersTerminatedToday: 0
+    SkinwalkersMissedToday: 0
+    InnocentsTerminatedToday: 0
+    FamilyHealth: 100
+    IsGameOver: 0
+    GameOverReason: 
+  OnDayStarted: {fileID: 0}
+  OnQueueStarted: {fileID: 0}
+  OnQueueEmpty: {fileID: 0}
+  OnDayEndStarted: {fileID: 0}
+  OnDayResolved: {fileID: 0}
+  OnGameOver: {fileID: 0}
+  OnMoneyChanged: {fileID: 0}
+--- !u!4 &1952096459
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.11163, y: 0.2775, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 768882943}
+  - {fileID: 1952096459}

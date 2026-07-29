@@ -1,11 +1,10 @@
 using System.Collections.Generic;
-using NUnit.Framework;
 using UnityEngine;
 
 public class DocumentVerification : MonoBehaviour
 {
-    [SerializeField]
-    private GameDate currentDate;
+    [SerializeField] private GameDate currentDate;
+    [SerializeField] private DayManager dayManager;
 
     public List<string> VerifyNPC(NPCData npc)
     {
@@ -17,6 +16,7 @@ public class DocumentVerification : MonoBehaviour
             return discrepancies;
         }
 
+        VerifyEntryEligibility(npc, discrepancies);
         VerifyIdentificationDocument(npc, discrepancies);
         VerifyEntryPermit(npc, discrepancies);
         VerifySupportingDocument(npc, discrepancies);
@@ -28,9 +28,14 @@ public class DocumentVerification : MonoBehaviour
     {
         if (npc.identificationDocument == null)
         {
-            discrepancies.Add("Identification document is missing.");
+            if (dayManager.HasDirective(DirectiveType.IdentificationRequired))
+            {
+                discrepancies.Add("Identification document is missing.");
+            }
+
             return;
         }
+
 
         if (npc.identificationDocument.HolderName != npc.FullName)
         {
@@ -126,6 +131,10 @@ public class DocumentVerification : MonoBehaviour
     {
         EntryPermitData permit = npc.entryPermit;
 
+        bool isCitizen = npc.nationality == dayManager.HomeCountry;
+
+        bool permitRequired = dayManager.HasDirective(DirectiveType.ForeignersRequireEntryPermit) && !isCitizen;
+
         if (permit == null)
         {
             discrepancies.Add("Entry permit is missing");
@@ -162,7 +171,11 @@ public class DocumentVerification : MonoBehaviour
     {
         if (npc.supportingDocument == null)
         {
-            discrepancies.Add("Supporting Document is missing.");
+            if (dayManager.HasDirective(DirectiveType.SupportingDocumentRequired))
+            {
+                discrepancies.Add("Supporting document is missing.");
+            }
+
             return;
         }
 
@@ -216,6 +229,16 @@ public class DocumentVerification : MonoBehaviour
         if (certificate.exposureStatus == ExposureStatus.Confirmed)
         {
             discrepancies.Add("Applicant has confirmed skinwalker exposure.");
+        }
+    }
+
+    private void VerifyEntryEligibility(NPCData npc, List<string> discrepancies)
+    {
+        bool isCitizen = npc.nationality == dayManager.HomeCountry;
+
+        if (dayManager.HasDirective(DirectiveType.CitizensOnly) && !isCitizen)
+        {
+            discrepancies.Add("Foreign citizens are not permitted today.");
         }
     }
 }

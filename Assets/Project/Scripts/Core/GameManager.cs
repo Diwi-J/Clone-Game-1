@@ -120,6 +120,7 @@ namespace Core
             if (Data.IsGameOver)
                 StateMachine.ChangeState(new GameOverState(this));
             else
+                Data.CurrentDay++;
                 StartNewDay();
         }
 
