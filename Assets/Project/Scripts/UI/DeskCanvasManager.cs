@@ -14,6 +14,7 @@ namespace Core.UI
         [Header("UI Components")]
         [SerializeField] private DocumentDisplayUI documentDisplayUI;
         [SerializeField] private DecisionUIController decisionUIController;
+        [SerializeField] private AnnouncementUI announcementUI;
 
         [Header("NPC Applicant Queue")]
         [Tooltip("List of NPCs for the current day. Can be populated via inspector or procedurally.")]
@@ -80,6 +81,12 @@ namespace Core.UI
             }
 
             CurrentNPC = todayApplicantQueue[currentApplicantIndex];
+
+            if (announcementUI != null)
+            {
+                announcementUI.Show("PAPERS, PLEASE.");
+            }
+
             if (documentDisplayUI != null)
             {
                 documentDisplayUI.DisplayNPCDocuments(CurrentNPC);
