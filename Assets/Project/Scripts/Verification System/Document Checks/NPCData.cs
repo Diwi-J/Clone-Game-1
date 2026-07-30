@@ -10,17 +10,11 @@ public class NPCData : ScriptableObject
     public string firstName;
     public string lastName;
     public GameDate dateOfBirth;
-    public string nationality;
+    public Nationality nationality;
     public Sex sex;
 
     [Header("True Appearance")]
     public Sprite portrait;
-
-    [Min(0)]
-    public int heightCm;
-
-    [Min(0)]
-    public float weightCm;
 
     [Header("True Entry Information")]
     public EntryPurpose entryPurpose;

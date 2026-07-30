@@ -75,15 +75,6 @@ public class DocumentVerification : MonoBehaviour
             discrepancies.Add("ID country does not match");
         }
 
-        if (id.heightCm != npc.heightCm)
-        {
-            discrepancies.Add("ID height does not match");
-        }
-
-        if (id.weightKg != npc.weightCm)
-        {
-            discrepancies.Add("ID weight does not match");
-        }
     }
 
     private void VerifyPassport(NPCData npc, PassportDocumentData passport, List<string> discrepancies)
@@ -238,7 +229,7 @@ public class DocumentVerification : MonoBehaviour
 
         if (dayManager.HasDirective(DirectiveType.CitizensOnly) && !isCitizen)
         {
-            discrepancies.Add("Foreign citizens are not permitted today.");
+            discrepancies.Add("Foreigners are not permitted today.");
         }
     }
 }

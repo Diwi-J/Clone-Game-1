@@ -80,7 +80,7 @@ namespace Core.UI
                 {
                     passportPanel.SetActive(true);
                     if (passportHolderNameText != null) passportHolderNameText.text = passport.HolderName;
-                    if (passportCountryText != null) passportCountryText.text = passport.country;
+                    if (passportCountryText != null) passportCountryText.text = passport.country.ToString();
                     if (passportDobText != null) passportDobText.text = passport.dateOfBirth.ToString();
                     if (passportSexText != null) passportSexText.text = passport.sex.ToString();
                     if (passportNumberText != null) passportNumberText.text = passport.passportNumber;
@@ -98,10 +98,8 @@ namespace Core.UI
                 {
                     idPanel.SetActive(true);
                     if (idHolderNameText != null) idHolderNameText.text = idDoc.HolderName;
-                    if (idCountryText != null) idCountryText.text = idDoc.country;
+                    if (idCountryText != null) idCountryText.text = idDoc.country.ToString();
                     if (idDobText != null) idDobText.text = idDoc.dateOfBirth.ToString();
-                    if (idHeightText != null) idHeightText.text = $"{idDoc.heightCm} cm";
-                    if (idWeightText != null) idWeightText.text = $"{idDoc.weightKg} kg";
                 }
             }
         }

@@ -57,3 +57,51 @@ public enum ExposureStatus
     Suspected, 
     Confirmed
 }
+
+public enum Nationality
+{
+    Arstotzka,
+    Antegria,
+    Impor,
+    Kolechia,
+    Obristan,
+    Republia,
+    UnitedFederation
+}
+
+public enum IssuingCity
+{
+    // Arstotzka
+    EastGrestin,
+    Paradizna,
+    OrvechVonor,
+
+    // Antegria
+    Glorian,
+    StMarmero,
+    OuterGrouse,
+
+    // Impor
+    Enkyo,
+    Haihan,
+    Tsunkeido,
+
+    // Kolechia
+    YurkoCity,
+    Vedor,
+    WestGrestin,
+
+    // Obristan
+    Skal,
+    Lorndaz,
+
+    // Republia
+    TrueGlorian,
+    Lesrenadi,
+    Bostan,
+
+    // United Federation
+    GreatRapid,
+    Shingleton,
+    KoristaCity
+}

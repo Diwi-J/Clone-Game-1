@@ -11,10 +11,10 @@ public class PassportDocumentData : IdentificationDocumentData
     public string passportNumber;
     public string firstName;
     public string lastName;
-    public string country;
+    public Nationality country;
     public GameDate dateOfBirth;
     public Sex sex;
-    public string issuingCity;
+    public IssuingCity issuingCity;
     public GameDate expirationDate;
     public override string HolderName => $"{firstName} {lastName}";
 

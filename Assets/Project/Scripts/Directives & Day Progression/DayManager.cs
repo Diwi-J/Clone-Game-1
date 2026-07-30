@@ -8,9 +8,8 @@ public class DayManager : MonoBehaviour
     [Header("Event Channels")]
     [SerializeField] private VoidEventChannelSO onDayStarted;
     [SerializeField] private VoidEventChannelSO onDayEndStarted;
-    [SerializeField] private string homeCountry = "Meowland";
-
-    public string HomeCountry => homeCountry;
+    private Nationality homeCountry => Nationality.Arstotzka;
+    public Nationality HomeCountry => homeCountry;
 
     public int CurrentDay => GameManager.Instance.Data.CurrentDay;
 

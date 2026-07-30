@@ -12,7 +12,7 @@ public class ClearanceCertificateData : SupportingDocumentData
     public string firstName;
     public string lastName;
     public GameDate dateOfBirth;
-    public string nationality;
+    public Nationality nationality;
     public Sprite Photo;
 
     [Header("Criminal Record")]
