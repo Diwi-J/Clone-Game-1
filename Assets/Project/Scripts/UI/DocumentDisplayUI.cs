@@ -79,12 +79,12 @@ namespace Core.UI
                 if (passportPanel != null)
                 {
                     passportPanel.SetActive(true);
-                    if (passportHolderNameText != null) passportHolderNameText.text = passport.HolderName;
-                    if (passportCountryText != null) passportCountryText.text = passport.country.ToString();
-                    if (passportDobText != null) passportDobText.text = passport.dateOfBirth.ToString();
-                    if (passportSexText != null) passportSexText.text = passport.sex.ToString();
-                    if (passportNumberText != null) passportNumberText.text = passport.passportNumber;
-                    if (passportExpiryText != null) passportExpiryText.text = passport.expirationDate.ToString();
+                    if (passportHolderNameText != null) passportHolderNameText.text = $"Name: {passport.HolderName}";
+                    if (passportCountryText != null) passportCountryText.text = $"Country: {passport.country}";
+                    if (passportDobText != null) passportDobText.text = $"Date of Birth: {passport.dateOfBirth}";
+                    if (passportSexText != null) passportSexText.text = $"Sex: {passport.sex}";
+                    if (passportNumberText != null) passportNumberText.text = $"Passport Number: {passport.passportNumber}";
+                    if (passportExpiryText != null) passportExpiryText.text = $"Expiry Date: {passport.expirationDate}";
                     if (passportPortraitImage != null)
                     {
                         passportPortraitImage.sprite = npc.portrait;
@@ -97,9 +97,9 @@ namespace Core.UI
                 if (idPanel != null)
                 {
                     idPanel.SetActive(true);
-                    if (idHolderNameText != null) idHolderNameText.text = idDoc.HolderName;
-                    if (idCountryText != null) idCountryText.text = idDoc.country.ToString();
-                    if (idDobText != null) idDobText.text = idDoc.dateOfBirth.ToString();
+                    if (idHolderNameText != null) idHolderNameText.text = $"Name: {idDoc.HolderName}";
+                    if (idCountryText != null) idCountryText.text = $"Country: {idDoc.country}";
+                    if (idDobText != null) idDobText.text = $"Date of Birth: {idDoc.dateOfBirth}";
                 }
             }
         }
@@ -116,10 +116,10 @@ namespace Core.UI
             }
 
             entryPermitPanel.SetActive(true);
-            if (entryPermitNameText != null) entryPermitNameText.text = permit.FullName;
-            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = permit.passportNumber;
-            if (entryPermitPurposeText != null) entryPermitPurposeText.text = permit.purpose.ToString();
-            if (entryPermitEntryByDateText != null) entryPermitEntryByDateText.text = permit.entryByDate.ToString();
+            if (entryPermitNameText != null) entryPermitNameText.text = $"Name: {permit.FullName}";
+            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = $"Name: {permit.passportNumber}";
+            if (entryPermitPurposeText != null) entryPermitPurposeText.text = $"Purpose: {permit.purpose}";
+            if (entryPermitEntryByDateText != null) entryPermitEntryByDateText.text = $"Entry By: {permit.entryByDate}";
             if (entryPermitSealGraphic != null) entryPermitSealGraphic.SetActive(permit.hasOfficialMark);
         }
 
