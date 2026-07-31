@@ -1,3 +1,4 @@
+using Core.Economy;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -113,7 +114,7 @@ namespace Core.UI
                 else if (result.outcome == DecisionOutcome.SkinwalkerAccepted)
                 {
                     data.SkinwalkersMissedToday++;
-                    data.FamilyHealth = Mathf.Max(0, data.FamilyHealth - 25);
+                    EconomyManager.Instance.AwardOutcome(result);
                 }
             }
         }
