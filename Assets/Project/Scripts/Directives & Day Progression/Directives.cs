@@ -38,7 +38,7 @@ public class Directives
                 {
                     DirectiveType.IdentificationRequired,
                     DirectiveType.ForeignersRequireEntryPermit,
-                    DirectiveType.SupportingDocumentRequired,
+                    DirectiveType.SupportingDocumentRequired, // clerance doc 
                     DirectiveType.KillConfirmedExposure,
                     DirectiveType.KillSkinwalker
                 };
