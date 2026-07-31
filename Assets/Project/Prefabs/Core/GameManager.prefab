@@ -52,6 +52,7 @@ MonoBehaviour:
     HeatCost: 10
     FoodCost: 10
     MedicineCost: 5
+    MissedRentToday: 0
     ApplicantsProcessedToday: 0
     CorrectDecisionsToday: 0
     WrongDecisionsToday: 0
@@ -61,10 +62,11 @@ MonoBehaviour:
     FamilyHealth: 100
     IsGameOver: 0
     GameOverReason: 
+    CurrentDirectives: 
   OnDayStarted: {fileID: 11400000, guid: fa53d73b67812674b996beb3c2609c7e, type: 2}
   OnQueueStarted: {fileID: 11400000, guid: ec1e8c857ab499246b99d2682ed4f270, type: 2}
   OnQueueEmpty: {fileID: 11400000, guid: f2290b49735eaba4ebd0805e652122bb, type: 2}
-  OnDayEndStarted: {fileID: 11400000, guid: decaa7d111fab4047bfaa2ac1eee2d80, type: 2}
+  OnFinancesStarted: {fileID: 11400000, guid: decaa7d111fab4047bfaa2ac1eee2d80, type: 2}
   OnDayResolved: {fileID: 11400000, guid: 97112a415a567634a81a2b8b25086c29, type: 2}
   OnGameOver: {fileID: 11400000, guid: 329b882ec25f62046a1bb37629115d10, type: 2}
   OnMoneyChanged: {fileID: 11400000, guid: 77ffda1656316b3419093c1b7dbc23a3, type: 2}

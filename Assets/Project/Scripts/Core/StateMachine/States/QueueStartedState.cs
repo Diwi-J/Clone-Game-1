@@ -17,13 +17,16 @@ namespace Core.StateMachine.States
     /// GameManager (not this class) is the one listening for gm.OnQueueEmpty and deciding
     /// to transition to DayEndState - see GameManager.HandleQueueEmpty().
     /// </summary>
-    public class QueueState : IState
+    public class QueueStartedState : IState
     {
         private readonly GameManager gm;
+        private readonly float duration;
+        private float timeRemaining;
 
-        public QueueState(GameManager gameManager)
+        public QueueStartedState(GameManager gameManager, float duration)
         {
             gm = gameManager;
+            this.duration = duration;
         }
 
         public void Enter()
@@ -37,8 +40,11 @@ namespace Core.StateMachine.States
 
         public void Tick()
         {
-            // Deliberately empty. The queue, verification, dialogue and document systems
-            // run off their own events/updates - the state machine doesn't micromanage them.
+            timeRemaining -= Time.deltaTime;
+            if (timeRemaining <= 0f)
+            {
+                gm.EndQueue();
+            }
         }
 
         public void Exit()

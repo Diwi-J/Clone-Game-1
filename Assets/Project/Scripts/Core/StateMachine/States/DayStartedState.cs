@@ -15,11 +15,11 @@ namespace Core.StateMachine.States
     /// briefing has been shown and dismissed. This is a deliberate choice so the briefing
     /// screen can stay up for as long as the UI system needs.
     /// </summary>
-    public class DayStartState : IState
+    public class DayStartedState : IState
     {
         private readonly GameManager gm;
 
-        public DayStartState(GameManager gameManager)
+        public DayStartedState(GameManager gameManager)
         {
             gm = gameManager;
         }
@@ -27,7 +27,6 @@ namespace Core.StateMachine.States
         public void Enter()
         {
             gm.Data.CurrentPhase = DayPhase.DayStart;
-            gm.Data.ResetDailyCounters();
 
             Debug.Log($"[DayStartState] Entered. Day {gm.Data.CurrentDay} begins.");
 

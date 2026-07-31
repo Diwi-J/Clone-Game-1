@@ -38,6 +38,7 @@ namespace Core.Data
         [Header("Progression")]
         public int CurrentDay = 1;
         public DayPhase CurrentPhase = DayPhase.MainMenu;
+        public float QueueDurationSeconds = 300f;
 
         [Header("Economy")]
         public int CurrentMoneyAmount = 0;
@@ -45,6 +46,7 @@ namespace Core.Data
         public int HeatCost = 0;
         public int FoodCost = 0;
         public int MedicineCost = 0;
+        public bool MissedRentToday = false;
 
         [Header("Border Performance (resets every day, see ResetDailyCounters)")]
         public int ApplicantsProcessedToday = 0;
