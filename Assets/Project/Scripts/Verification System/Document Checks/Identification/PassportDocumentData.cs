@@ -16,6 +16,7 @@ public class PassportDocumentData : IdentificationDocumentData
     public Sex sex;
     public IssuingCity issuingCity;
     public GameDate expirationDate;
+    public Sprite portrait;
     public override string HolderName => $"{firstName} {lastName}";
 
     // sets document type ad Identification so dont have to manually set it

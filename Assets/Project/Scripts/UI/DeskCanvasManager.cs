@@ -1,9 +1,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Core.Data;
+using System;
 
 namespace Core.UI
 {
+    [Serializable]
+    public class DailyApplicantQueue
+    {
+        [Min(1)]
+        public int dayNumber = 1;
+
+        public List<NPCData> applicants = new List<NPCData>();
+    }
     /// <summary>
     /// Desk UI Controller managing the queue of incoming NPCs on the desk,
     /// triggering document updates on DocumentDisplayUI, enabling/disabling decision controls,
@@ -12,75 +21,141 @@ namespace Core.UI
     public class DeskCanvasManager : MonoBehaviour
     {
         [Header("UI Components")]
-        [SerializeField] private DocumentDisplayUI documentDisplayUI;
-        [SerializeField] private DecisionUIController decisionUIController;
-        [SerializeField] private AnnouncementUI announcementUI;
+        [SerializeField]  private DocumentDisplayUI documentDisplayUI; 
+        [SerializeField]  private DecisionUIController decisionUIController;
+        [SerializeField]  private AnnouncementUI announcementUI;
 
-        [Header("NPC Applicant Queue")]
-        [Tooltip("List of NPCs for the current day. Can be populated via inspector or procedurally.")]
-        [SerializeField] private List<NPCData> todayApplicantQueue = new List<NPCData>();
+        [Header("Daily Applicant Queues")]
+        [Tooltip("Create one entry for each day and assign that day's NPCs.")]
+        [SerializeField]
+        private List<DailyApplicantQueue> dailyQueues =
+             new List<DailyApplicantQueue>();
 
-        private int currentApplicantIndex = 0;
+        [Header("Testing")]
+        [Tooltip("Used when testing without the GameManager.")]
+        [Min(1)]
+        [SerializeField]
+        private int testDay = 1;
+
+        private List<NPCData> currentDayQueue =
+            new List<NPCData>();
+
+        private int currentApplicantIndex;
+
         public NPCData CurrentNPC { get; private set; }
 
         private void OnEnable()
         {
-            if (GameManager.Instance != null && GameManager.Instance.OnQueueStarted != null)
+            if (GameManager.Instance != null &&
+                GameManager.Instance.OnQueueStarted != null)
             {
-                GameManager.Instance.OnQueueStarted.OnEventRaised += HandleQueueStarted;
+                GameManager.Instance.OnQueueStarted.OnEventRaised +=
+                    HandleQueueStarted;
             }
         }
-
         private void OnDisable()
         {
-            if (GameManager.Instance != null && GameManager.Instance.OnQueueStarted != null)
+            if (GameManager.Instance != null &&
+                GameManager.Instance.OnQueueStarted != null)
             {
-                GameManager.Instance.OnQueueStarted.OnEventRaised -= HandleQueueStarted;
+                GameManager.Instance.OnQueueStarted.OnEventRaised -=
+                    HandleQueueStarted;
             }
         }
 
         private void Start()
         {
-            // Auto-present the first applicant if testing directly in Play Mode
-            if (CurrentNPC == null && todayApplicantQueue != null && todayApplicantQueue.Count > 0)
+            if (GameManager.Instance == null)
             {
+                LoadQueueForDay(testDay);
                 PresentNextApplicant();
             }
         }
 
+
         /// <summary>
         /// Set queue of applicants for the current day.
         /// </summary>
-        public void SetDailyQueue(List<NPCData> applicants)
-        {
-            todayApplicantQueue = applicants ?? new List<NPCData>();
-            currentApplicantIndex = 0;
-        }
+
 
         private void HandleQueueStarted()
         {
-            currentApplicantIndex = 0;
+            int currentDay = GetCurrentDay();
+
+            LoadQueueForDay(currentDay);
             PresentNextApplicant();
+        }
+        private int GetCurrentDay()
+        {
+            if (GameManager.Instance != null &&
+                GameManager.Instance.Data != null)
+            {
+                return GameManager.Instance.Data.CurrentDay;
+            }
+
+            Debug.LogWarning(
+                "[DeskCanvasManager] GameManager was not available. " +
+                $"Using test day {testDay}."
+            );
+
+            return testDay;
+        }
+        private void LoadQueueForDay(int dayNumber)
+        {
+            DailyApplicantQueue selectedQueue =
+                dailyQueues.Find(queue =>
+                    queue.dayNumber == dayNumber);
+
+            if (selectedQueue == null)
+            {
+                Debug.LogWarning(
+                    $"[DeskCanvasManager] No applicant queue was assigned " +
+                    $"for Day {dayNumber}."
+                );
+
+                currentDayQueue = new List<NPCData>();
+            }
+            else
+            {
+                /*
+                 * Make a new list so the original Inspector list
+                 * is not changed while playing.
+                 */
+                currentDayQueue =
+                    new List<NPCData>(selectedQueue.applicants);
+            }
+
+            currentApplicantIndex = 0;
+            CurrentNPC = null;
+
+            Debug.Log(
+                $"[DeskCanvasManager] Loaded Day {dayNumber} with " +
+                $"{currentDayQueue.Count} applicants."
+            );
         }
 
         public void PresentNextApplicant()
         {
-            if (todayApplicantQueue == null || currentApplicantIndex >= todayApplicantQueue.Count)
+            if (currentDayQueue == null ||
+                 currentApplicantIndex >= currentDayQueue.Count)
             {
-                // Queue is finished for today
-                CurrentNPC = null;
-                if (documentDisplayUI != null) documentDisplayUI.ClearAllDocuments();
-                if (decisionUIController != null) decisionUIController.SetButtonsInteractable(false);
-
-                Debug.Log("[DeskCanvasManager] All daily applicants processed. Raising OnQueueEmpty.");
-                if (GameManager.Instance != null && GameManager.Instance.OnQueueEmpty != null)
-                {
-                    GameManager.Instance.OnQueueEmpty.Raise();
-                }
+                FinishCurrentQueue();
                 return;
             }
 
-            CurrentNPC = todayApplicantQueue[currentApplicantIndex];
+            CurrentNPC =
+                currentDayQueue[currentApplicantIndex];
+
+            if (CurrentNPC == null)
+            {
+                Debug.LogWarning(
+                    $"DeskCanvasManager: Applicant at index " + $"{currentApplicantIndex} is missing."
+                );
+
+                currentApplicantIndex++;
+                PresentNextApplicant();
+                return;
+            }
 
             if (announcementUI != null)
             {
@@ -97,11 +172,46 @@ namespace Core.UI
                 decisionUIController.SetButtonsInteractable(true);
             }
         }
-
         public void OnDecisionCompleted()
         {
             currentApplicantIndex++;
             PresentNextApplicant();
+        }
+
+        public void FinishCurrentQueue()
+        {
+            CurrentNPC = null;
+
+            if (documentDisplayUI != null)
+            {
+                documentDisplayUI.ClearAllDocuments();
+            }
+
+            if (decisionUIController != null)
+            {
+                decisionUIController.SetButtonsInteractable(false);
+            }
+
+            Debug.Log(
+                "DeskCanvasManager: All applicants for the current " + "day have been processed."
+            );
+
+            if (GameManager.Instance != null &&
+                GameManager.Instance.OnQueueEmpty != null)
+            {
+                GameManager.Instance.OnQueueEmpty.Raise();
+            }
+        }
+
+        public void SetDailyQueue(List<NPCData> applicants)
+        {
+            currentDayQueue =
+                applicants != null
+                    ? new List<NPCData>(applicants)
+                    : new List<NPCData>();
+
+            currentApplicantIndex = 0;
+            CurrentNPC = null;
         }
     }
 }

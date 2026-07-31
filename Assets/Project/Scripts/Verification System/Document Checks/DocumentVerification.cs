@@ -12,224 +12,394 @@ public class DocumentVerification : MonoBehaviour
 
         if (npc == null)
         {
-            discrepancies.Add("No NPC data was procided");
+            discrepancies.Add("No NPC data was provided.");
+            return discrepancies;
+        }
+
+        if (dayManager == null)
+        {
+            discrepancies.Add("DayManager reference is missing.");
             return discrepancies;
         }
 
         VerifyEntryEligibility(npc, discrepancies);
-        VerifyIdentificationDocument(npc, discrepancies);
+
+        VerifyPassport(npc, discrepancies);
+        VerifyIDCard(npc, discrepancies);
         VerifyEntryPermit(npc, discrepancies);
-        VerifySupportingDocument(npc, discrepancies);
+        VerifyWorkPermit(npc, discrepancies);
+        VerifyClearanceCertificate(npc, discrepancies);
+        VerifyVaccineCertificate(npc, discrepancies);
 
         return discrepancies;
     }
 
-    private void VerifyIdentificationDocument(NPCData npc, List<string> discrepancies)
+    // PASSPORT
+    private void VerifyPassport(
+        NPCData npc,
+        List<string> discrepancies)
     {
-        if (npc.identificationDocument == null)
-        {
-            if (dayManager.HasDirective(DirectiveType.IdentificationRequired))
-            {
-                discrepancies.Add("Identification document is missing.");
-            }
+        PassportDocumentData passport = npc.passportDocument;
 
+        // Everyone must have a passport because it is stamped.
+        if (passport == null)
+        {
+            discrepancies.Add("Passport is missing.");
             return;
         }
 
-
-        if (npc.identificationDocument.HolderName != npc.FullName)
+        if (passport.HolderName != npc.FullName)
         {
-            discrepancies.Add("Identification document name does not match");
+            discrepancies.Add("Passport name does not match.");
         }
 
-        if (npc.identificationDocument.isForged)
+        if (passport.isForged)
         {
-            discrepancies.Add("identification document is forged");
+            discrepancies.Add("Passport is forged.");
         }
 
-        switch (npc.identificationDocument)
+        if (
+            passport.dateOfBirth.ToDateTime() !=
+            npc.dateOfBirth.ToDateTime()
+        )
         {
-            case IDDocumentData id:
-                VerifyID(npc, id, discrepancies);
-                break;
-
-            case PassportDocumentData passport:
-                VerifyPassport(npc, passport, discrepancies);
-                break;
-
-            case WorkPermitDocumentData permit:
-                VerifyWorkPermit(npc, permit, discrepancies);
-                break;
-        }
-    }
-
-    private void VerifyID(NPCData npc, IDDocumentData id, List<string> discrepancies)
-    {
-        if (id.dateOfBirth.ToDateTime() != npc.dateOfBirth.ToDateTime())
-        {
-            discrepancies.Add("ID date of birth does not match");
-        }
-
-        if (id.country != npc.nationality)
-        {
-            discrepancies.Add("ID country does not match");
-        }
-
-    }
-
-    private void VerifyPassport(NPCData npc, PassportDocumentData passport, List<string> discrepancies)
-    {
-        if (passport.dateOfBirth.ToDateTime() != npc.dateOfBirth.ToDateTime())
-        {
-            discrepancies.Add("Passport date of birth does not match");
+            discrepancies.Add(
+                "Passport date of birth does not match."
+            );
         }
 
         if (passport.country != npc.nationality)
         {
-            discrepancies.Add("Passport country does not match.");
+            discrepancies.Add(
+                "Passport nationality does not match."
+            );
         }
 
         if (passport.sex != npc.sex)
         {
-            discrepancies.Add("Passport sex does not match");
+            discrepancies.Add("Passport sex does not match.");
         }
 
         if (passport.passportNumber != npc.passportNumber)
         {
-            discrepancies.Add("Passport number does not match.");
+            discrepancies.Add(
+                "Passport number does not match."
+            );
         }
 
         if (passport.expirationDate.IsExpired(currentDate))
         {
-            discrepancies.Add("Passport is expired");
+            discrepancies.Add("Passport is expired.");
         }
     }
 
-    private void VerifyWorkPermit(NPCData npc, WorkPermitDocumentData workPermit, List<string> discrepancies)
+    // ID CARD
+    private void VerifyIDCard(
+        NPCData npc,
+        List<string> discrepancies)
     {
-        if (!workPermit.hasOfficialMark)
+        IDDocumentData idCard = npc.identificationDocument;
+
+        // ID Cards are optional unless you create an ID-required rule.
+        if (idCard == null)
         {
-            discrepancies.Add("Work permit seal is wrong / missing");
+            return;
         }
 
-        if (workPermit.validUntil.IsExpired(currentDate))
+        if (idCard.HolderName != npc.FullName)
         {
-            discrepancies.Add("Work permit is expired");
+            discrepancies.Add("ID Card name does not match.");
+        }
+
+        if (idCard.isForged)
+        {
+            discrepancies.Add("ID Card is forged.");
+        }
+
+        if (
+            idCard.dateOfBirth.ToDateTime() !=
+            npc.dateOfBirth.ToDateTime()
+        )
+        {
+            discrepancies.Add(
+                "ID Card date of birth does not match."
+            );
+        }
+
+        if (idCard.country != npc.nationality)
+        {
+            discrepancies.Add(
+                "ID Card nationality does not match."
+            );
+        }
+
+        // Only use this if IDDocumentData contains idNumber.
+        if (idCard.idNumber != npc.idNumber)
+        {
+            discrepancies.Add(
+                "ID Card number does not match."
+            );
         }
     }
 
-    private void VerifyEntryPermit(NPCData npc, List<string> discrepancies)
+    // ENTRY PERMIT
+    private void VerifyEntryPermit(
+        NPCData npc,
+        List<string> discrepancies)
     {
+        bool isCitizen =
+            npc.nationality == dayManager.HomeCountry;
+
+        bool permitRequired =
+            dayManager.HasDirective(
+                DirectiveType.ForeignersRequireEntryPermit
+            )
+            && !isCitizen;
+
         EntryPermitData permit = npc.entryPermit;
-
-        bool isCitizen = npc.nationality == dayManager.HomeCountry;
-
-        bool permitRequired = dayManager.HasDirective(DirectiveType.ForeignersRequireEntryPermit) && !isCitizen;
 
         if (permit == null)
         {
-            discrepancies.Add("Entry permit is missing");
+            // Only report it as missing when it is required.
+            if (permitRequired)
+            {
+                discrepancies.Add("Entry Permit is missing.");
+            }
+
             return;
         }
 
         if (permit.FullName != npc.FullName)
         {
-            discrepancies.Add("Entry permit name does not match");
+            discrepancies.Add(
+                "Entry Permit name does not match."
+            );
         }
 
         if (permit.passportNumber != npc.passportNumber)
         {
-            discrepancies.Add("Entry permit passport number does not match");
+            discrepancies.Add(
+                "Entry Permit passport number does not match."
+            );
         }
 
         if (permit.purpose != npc.entryPurpose)
         {
-            discrepancies.Add("Entry puurpose does not match.");
+            discrepancies.Add(
+                "Entry Permit purpose does not match."
+            );
         }
 
         if (permit.entryByDate.IsExpired(currentDate))
         {
-            discrepancies.Add("Enter by date has passed.");
+            discrepancies.Add(
+                "Entry Permit entry-by date has passed."
+            );
         }
 
         if (!permit.hasOfficialMark)
         {
-            discrepancies.Add("Entry permit seal is incorrect or missing");
+            discrepancies.Add(
+                "Entry Permit seal is incorrect or missing."
+            );
+        }
+
+        if (permit.isForged)
+        {
+            discrepancies.Add("Entry Permit is forged.");
         }
     }
 
-    private void VerifySupportingDocument(NPCData npc, List<string> discrepancies)
+    // WORK PERMIT
+    private void VerifyWorkPermit(
+        NPCData npc,
+        List<string> discrepancies)
     {
-        if (npc.supportingDocument == null)
+        WorkPermitDocumentData workPermit = npc.workPermit;
+
+        bool workPermitRequired =
+            npc.entryPurpose == EntryPurpose.Work;
+
+        if (workPermit == null)
         {
-            if (dayManager.HasDirective(DirectiveType.SupportingDocumentRequired))
+            if (workPermitRequired)
             {
-                discrepancies.Add("Supporting document is missing.");
+                discrepancies.Add("Work Permit is missing.");
             }
 
             return;
         }
 
-        if (npc.supportingDocument.HolderName != npc.FullName)
+        if (workPermit.HolderName != npc.FullName)
         {
-            discrepancies.Add("Supporting document name does not match.");
+            discrepancies.Add(
+                "Work Permit name does not match."
+            );
         }
 
-        switch (npc.supportingDocument)
+        if (workPermit.isForged)
         {
-            case ClearanceCertificateData clearance:
-                VerifyClearanceCertificate(clearance, discrepancies);
-                break;
-
-            case VaccineCertificationData vaccine:
-                VerifyVaccineCertificate(vaccine, discrepancies);
-                break;
-        }
-    }
-
-    private void VerifyClearanceCertificate(ClearanceCertificateData certificate, List<string> discrepancies)
-    {
-        if (!certificate.hasOfficialMark)
-        {
-            discrepancies.Add("Clearance certificate seal incorrect or missing");
+            discrepancies.Add("Work Permit is forged.");
         }
 
-        if (certificate.validUntil.IsExpired(currentDate))
+        if (!workPermit.hasOfficialMark)
         {
-            discrepancies.Add("Clearance certificate is expired");
+            discrepancies.Add(
+                "Work Permit seal is incorrect or missing."
+            );
+        }
+
+        if (workPermit.validUntil.IsExpired(currentDate))
+        {
+            discrepancies.Add("Work Permit is expired.");
         }
     }
 
-    private void VerifyVaccineCertificate(VaccineCertificationData certificate, List<string> discrepancies)
+    // CLEARANCE CERTIFICATE
+    private void VerifyClearanceCertificate(
+        NPCData npc,
+        List<string> discrepancies)
     {
-        if(!certificate.hasOfficialMark)
+        ClearanceCertificateData clearance =
+            npc.clearanceDocument;
+
+        bool supportingDocumentRequired =
+            dayManager.HasDirective(
+                DirectiveType.SupportingDocumentRequired
+            );
+
+        // The applicant may satisfy the supporting-document
+        // requirement with either clearance or vaccine.
+        if (
+            clearance == null &&
+            npc.vaccineCertification == null
+        )
         {
-            discrepancies.Add("Vaccine certificate seal is missing or incorrect.");
+            if (supportingDocumentRequired)
+            {
+                discrepancies.Add(
+                    "Supporting document is missing."
+                );
+            }
+
+            return;
         }
 
-        if (certificate.validUntil.IsExpired(currentDate))
+        // No clearance was presented, but a vaccine may exist.
+        if (clearance == null)
         {
-            discrepancies.Add("Vaccine certificate is expired.");
+            return;
         }
 
-        if (certificate.exposureStatus == ExposureStatus.Suspected)
+        if (clearance.HolderName != npc.FullName)
         {
-            discrepancies.Add("Applicant has suspected skinwalker exposure.");
+            discrepancies.Add(
+                "Clearance Certificate name does not match."
+            );
         }
 
-        if (certificate.exposureStatus == ExposureStatus.Confirmed)
+        if (clearance.isForged)
         {
-            discrepancies.Add("Applicant has confirmed skinwalker exposure.");
+            discrepancies.Add(
+                "Clearance Certificate is forged."
+            );
+        }
+
+        if (!clearance.hasOfficialMark)
+        {
+            discrepancies.Add(
+                "Clearance Certificate seal is incorrect or missing."
+            );
+        }
+
+        if (clearance.validUntil.IsExpired(currentDate))
+        {
+            discrepancies.Add(
+                "Clearance Certificate is expired."
+            );
         }
     }
 
-    private void VerifyEntryEligibility(NPCData npc, List<string> discrepancies)
+    // VACCINE CERTIFICATE
+    private void VerifyVaccineCertificate(
+        NPCData npc,
+        List<string> discrepancies)
     {
-        bool isCitizen = npc.nationality == dayManager.HomeCountry;
+        VaccineCertificationData vaccine =
+            npc.vaccineCertification;
 
-        if (dayManager.HasDirective(DirectiveType.CitizensOnly) && !isCitizen)
+        if (vaccine == null)
         {
-            discrepancies.Add("Foreigners are not permitted today.");
+            return;
+        }
+
+        if (vaccine.HolderName != npc.FullName)
+        {
+            discrepancies.Add(
+                "Vaccine Certificate name does not match."
+            );
+        }
+
+        if (vaccine.isForged)
+        {
+            discrepancies.Add(
+                "Vaccine Certificate is forged."
+            );
+        }
+
+        if (!vaccine.hasOfficialMark)
+        {
+            discrepancies.Add(
+                "Vaccine Certificate seal is incorrect or missing."
+            );
+        }
+
+        if (vaccine.validUntil.IsExpired(currentDate))
+        {
+            discrepancies.Add(
+                "Vaccine Certificate is expired."
+            );
+        }
+
+        if (
+            vaccine.exposureStatus ==
+            ExposureStatus.Suspected
+        )
+        {
+            discrepancies.Add(
+                "Applicant has suspected Skinwalker exposure."
+            );
+        }
+
+        if (
+            vaccine.exposureStatus ==
+            ExposureStatus.Confirmed
+        )
+        {
+            discrepancies.Add(
+                "Applicant has confirmed Skinwalker exposure."
+            );
+        }
+    }
+
+    // ENTRY ELIGIBILITY
+    private void VerifyEntryEligibility(
+        NPCData npc,
+        List<string> discrepancies)
+    {
+        bool isCitizen =
+            npc.nationality == dayManager.HomeCountry;
+
+        if (
+            dayManager.HasDirective(
+                DirectiveType.CitizensOnly
+            )
+            && !isCitizen
+        )
+        {
+            discrepancies.Add(
+                "Foreigners are not permitted today."
+            );
         }
     }
 }

@@ -24,13 +24,18 @@ public class NPCData : ScriptableObject
 
     public string passportNumber;
 
+    public string idNumber;
+
     [Header("NPC Classification")]
     public bool isSkinwalker;
 
     [Header("PresentedDocuments")]
-    public IdentificationDocumentData identificationDocument;
+    public PassportDocumentData passportDocument;
+    public IDDocumentData identificationDocument;
+    public WorkPermitDocumentData workPermit;
     public EntryPermitData entryPermit;
-    public SupportingDocumentData supportingDocument;
+    public ClearanceCertificateData clearanceDocument;
+    public VaccineCertificationData vaccineCertification;
 
     public string FullName => $"{firstName} {lastName}";
 

@@ -11,37 +11,69 @@ namespace Core.UI
     {
         [Header("Passport UI Panel")]
         [SerializeField] private GameObject passportPanel;
-        [SerializeField] private Text passportHolderNameText;
+        [SerializeField] private Text firstNamePassportText;
+        [SerializeField] private Text lastNamePassportText;
         [SerializeField] private Text passportCountryText;
         [SerializeField] private Text passportDobText;
         [SerializeField] private Text passportSexText;
         [SerializeField] private Text passportNumberText;
         [SerializeField] private Text passportExpiryText;
         [SerializeField] private Image passportPortraitImage;
+        [SerializeField] private Image officialPassportMarkImage;
 
         [Header("ID Document UI Panel")]
         [SerializeField] private GameObject idPanel;
-        [SerializeField] private Text idHolderNameText;
+        [SerializeField] private Text firstNameIDText;
+        [SerializeField] private Text lastNameIDText;
+        [SerializeField] private Text districtIssuedText;
         [SerializeField] private Text idCountryText;
         [SerializeField] private Text idDobText;
-        [SerializeField] private Text idHeightText;
-        [SerializeField] private Text idWeightText;
+        [SerializeField] private Text idNumberText;
+        [SerializeField] private Image idPortraitImage;
+
+        [Header("Work Permit UI Panel")]
+        [SerializeField] private GameObject workPermitPanel;
+        [SerializeField] private Text workPanelHolderNameText;
+        [SerializeField] private Text workFieldText;
+        [SerializeField] private Text validUntilDate;
+
 
         [Header("Entry Permit UI Panel")]
         [SerializeField] private GameObject entryPermitPanel;
-        [SerializeField] private Text entryPermitNameText;
+        [SerializeField] private Text entryPermitFirstNameText;
+        [SerializeField] private Text entryPermitLastNameText;
         [SerializeField] private Text entryPermitPassportNumText;
         [SerializeField] private Text entryPermitPurposeText;
         [SerializeField] private Text entryPermitEntryByDateText;
-        [SerializeField] private GameObject entryPermitSealGraphic;
+        [SerializeField] private Text stayDurationText;
+        [SerializeField] private Image entryPermitSealGraphic;
 
-        [Header("Supporting Document UI Panel")]
-        [SerializeField] private GameObject supportingDocPanel;
-        [SerializeField] private Text supportingDocTitleText;
-        [SerializeField] private Text supportingDocHolderNameText;
-        [SerializeField] private Text supportingDocStatusText;
-        [SerializeField] private Text supportingDocExpiryText;
-        [SerializeField] private GameObject supportingDocSealGraphic;
+        [Header("Clearance Certificate UI Panel")]
+        [SerializeField] private GameObject clearanceDocPanel;
+        [SerializeField] private Text clearanceFirstNameText;
+        [SerializeField] private Text clearanceLastNameText;
+        [SerializeField] private Text clearenceDobText;
+        [SerializeField] private Text clearanceCountryText;
+        [SerializeField] private Image clearancePortraitImage;
+        [SerializeField] private Text offenceText;
+        [SerializeField] private Text clearanceIssueDateText;
+        [SerializeField] private Text clearanceValidUntilText;
+        [SerializeField] private Text offenceCategoryText;
+        [SerializeField] private Image offenceMarkImage;
+
+
+        [Header("Vaccine Ceritificate UI Panel")]
+        [SerializeField] private GameObject vaccineDocPanel;
+        [SerializeField] private Text vaccineFirstNameText;
+        [SerializeField] private Text vaccineLastNameText;
+        [SerializeField] private Text vaccineDobText;
+        [SerializeField] private Text vaccineTypeText;
+        [SerializeField] private Text vaccineDosesText;
+        [SerializeField] private Text exposureStatusText;
+        [SerializeField] private Text vaccineIssueDateText;
+        [SerializeField] private Text vaccineValidUntilText;
+        [SerializeField] private Text medicalFacilityText;
+
 
         /// <summary>
         /// Update desk UI documents for a new incoming NPC.
@@ -54,61 +86,133 @@ namespace Core.UI
                 return;
             }
 
-            SetupIdentificationDoc(npc);
+            SetupPassport(npc);
+            SetupIDCard(npc);
+            SetupWorkPermit(npc);
             SetupEntryPermit(npc);
-            SetupSupportingDoc(npc);
+            SetupClearanceCertificate(npc);
+            SetupVaccineCertificate(npc);
         }
 
         public void ClearAllDocuments()
         {
             if (passportPanel != null) passportPanel.SetActive(false);
+
             if (idPanel != null) idPanel.SetActive(false);
+
+            if (workPermitPanel != null) workPermitPanel.SetActive(false);
+
             if (entryPermitPanel != null) entryPermitPanel.SetActive(false);
-            if (supportingDocPanel != null) supportingDocPanel.SetActive(false);
+
+            if (clearanceDocPanel != null) clearanceDocPanel.SetActive(false);
+
+            if (vaccineDocPanel != null) vaccineDocPanel.SetActive(false);
         }
 
-        private void SetupIdentificationDoc(NPCData npc)
+        private void SetupPassport(NPCData npc)
         {
-            if (passportPanel != null) passportPanel.SetActive(false);
-            if (idPanel != null) idPanel.SetActive(false);
+            if (passportPanel == null) return;
+            PassportDocumentData passport = npc.passportDocument;
 
-            if (npc.identificationDocument == null) return;
+            if (passport == null)
+            {
+                passportPanel.SetActive(false);
+                return;
+            }
 
-            if (npc.identificationDocument is PassportDocumentData passport)
+            passportPanel.SetActive(true);
+
+            if (firstNamePassportText != null) firstNamePassportText.text = $"First Name: {passport.firstName}";
+
+            if (lastNamePassportText != null) lastNamePassportText.text = $"Last Name: {passport.lastName}";
+
+            if (passportCountryText != null) passportCountryText.text = $"Country: {passport.country}";
+
+            if (passportDobText != null) passportDobText.text = $"Date of Birth: {passport.dateOfBirth}";
+
+            if (passportSexText != null) passportSexText.text = $"Sex: {passport.sex}";
+
+            if (passportNumberText != null) passportNumberText.text = $"Passport Number: {passport.passportNumber}";
+
+            if (passportExpiryText != null) passportExpiryText.text = $"Expiry Date: {passport.expirationDate}";
+
+            if (passportPortraitImage != null)
             {
-                if (passportPanel != null)
-                {
-                    passportPanel.SetActive(true);
-                    if (passportHolderNameText != null) passportHolderNameText.text = $"Name: {passport.HolderName}";
-                    if (passportCountryText != null) passportCountryText.text = $"Country: {passport.country}";
-                    if (passportDobText != null) passportDobText.text = $"Date of Birth: {passport.dateOfBirth}";
-                    if (passportSexText != null) passportSexText.text = $"Sex: {passport.sex}";
-                    if (passportNumberText != null) passportNumberText.text = $"Passport Number: {passport.passportNumber}";
-                    if (passportExpiryText != null) passportExpiryText.text = $"Expiry Date: {passport.expirationDate}";
-                    if (passportPortraitImage != null)
-                    {
-                        passportPortraitImage.sprite = npc.portrait;
-                        passportPortraitImage.enabled = (npc.portrait != null);
-                    }
-                }
+                passportPortraitImage.sprite = passport.portrait;
+                passportPortraitImage.enabled =
+                    passport.portrait != null;
             }
-            else if (npc.identificationDocument is IDDocumentData idDoc)
+
+            if (officialPassportMarkImage != null)
             {
-                if (idPanel != null)
-                {
-                    idPanel.SetActive(true);
-                    if (idHolderNameText != null) idHolderNameText.text = $"Name: {idDoc.HolderName}";
-                    if (idCountryText != null) idCountryText.text = $"Country: {idDoc.country}";
-                    if (idDobText != null) idDobText.text = $"Date of Birth: {idDoc.dateOfBirth}";
-                }
+                officialPassportMarkImage.enabled =
+                    passport.hasOfficialMark;
             }
+        }
+
+        private void SetupIDCard(NPCData npc)
+        {
+            if (idPanel == null) return;
+
+            IDDocumentData idCard = npc.identificationDocument;
+
+            if (idCard == null)
+            {
+                idPanel.SetActive(false);
+                return;
+            }
+
+            idPanel.SetActive(true);
+
+            if (firstNameIDText != null) firstNameIDText.text = $"First Name: {idCard.firstName}";
+
+            if (lastNameIDText != null) lastNameIDText.text = $"Last Name: {idCard.lastName}";
+
+            if (districtIssuedText != null) districtIssuedText.text = $"District Issued: {idCard.districtIssued}";
+
+            if (idCountryText != null) idCountryText.text = $"Country: {idCard.country}";
+
+            if (idDobText != null) idDobText.text = $"Date of Birth: {idCard.dateOfBirth}";
+
+            if (idNumberText != null) idNumberText.text = $"ID Number: {idCard.idNumber}";
+
+            if (idPortraitImage != null)
+            {
+                idPortraitImage.sprite = idCard.portrait;
+                idPortraitImage.enabled =
+                    idCard.portrait != null;
+            }
+        }
+
+        private void SetupWorkPermit(NPCData npc)
+        {
+            if (workPermitPanel == null)
+                return;
+
+            WorkPermitDocumentData workPermit = npc.workPermit;
+
+            if (workPermit == null)
+            {
+                workPermitPanel.SetActive(false);
+                return;
+            }
+
+            workPermitPanel.SetActive(true);
+
+            if (workPanelHolderNameText != null) workPanelHolderNameText.text = $"Holder: {workPermit.HolderName}";
+
+            if (workFieldText != null) workFieldText.text = $"Work Field: {workPermit.workField}";
+
+            if (validUntilDate != null) validUntilDate.text = $"Valid Until: {workPermit.validUntil}";
         }
 
         private void SetupEntryPermit(NPCData npc)
         {
-            if (entryPermitPanel == null) return;
+            if (entryPermitPanel == null)
+                return;
 
             EntryPermitData permit = npc.entryPermit;
+
             if (permit == null)
             {
                 entryPermitPanel.SetActive(false);
@@ -116,40 +220,157 @@ namespace Core.UI
             }
 
             entryPermitPanel.SetActive(true);
-            if (entryPermitNameText != null) entryPermitNameText.text = $"Name: {permit.FullName}";
-            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = $"Name: {permit.passportNumber}";
+
+            if (entryPermitFirstNameText != null) entryPermitFirstNameText.text = $"First Name: {permit.firstName}";
+
+            if (entryPermitLastNameText != null) entryPermitLastNameText.text = $"Last Name: {permit.lastName}";
+
+            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = $"Passport Number: {permit.passportNumber}";
+
             if (entryPermitPurposeText != null) entryPermitPurposeText.text = $"Purpose: {permit.purpose}";
+
             if (entryPermitEntryByDateText != null) entryPermitEntryByDateText.text = $"Entry By: {permit.entryByDate}";
-            if (entryPermitSealGraphic != null) entryPermitSealGraphic.SetActive(permit.hasOfficialMark);
+
+            if (stayDurationText != null) stayDurationText.text = $"Duration: {permit.durationDays} days";
+
+            if (entryPermitSealGraphic != null)
+            {
+                entryPermitSealGraphic.enabled =
+                    permit.hasOfficialMark;
+            }
         }
 
-        private void SetupSupportingDoc(NPCData npc)
+        private void SetupVaccineCertificate(NPCData npc)
         {
-            if (supportingDocPanel == null) return;
+            if (vaccineDocPanel == null)
+                return;
 
-            SupportingDocumentData supp = npc.supportingDocument;
-            if (supp == null)
+            VaccineCertificationData vaccine =
+                npc.vaccineCertification;
+
+            if (vaccine == null)
             {
-                supportingDocPanel.SetActive(false);
+                vaccineDocPanel.SetActive(false);
                 return;
             }
 
-            supportingDocPanel.SetActive(true);
-            if (supportingDocHolderNameText != null) supportingDocHolderNameText.text = supp.HolderName;
+            vaccineDocPanel.SetActive(true);
 
-            if (supp is ClearanceCertificateData clearance)
+            if (vaccineFirstNameText != null) vaccineFirstNameText.text = $"First Name: {vaccine.firstName}";
+
+            if (vaccineLastNameText != null) vaccineLastNameText.text = $"Last Name: {vaccine.lastName}";
+
+            if (vaccineDobText != null) vaccineDobText.text = $"Date of Birth: {vaccine.dateOfBirth}";
+
+            if (vaccineTypeText != null) vaccineTypeText.text = $"Vaccine Type: {vaccine.vaccineType}";
+
+            if (vaccineDosesText != null) vaccineDosesText.text = $"Doses: {vaccine.doses}";
+
+            if (exposureStatusText != null) exposureStatusText.text = $"Exposure: {vaccine.exposureStatus}";
+
+            if (vaccineIssueDateText != null) vaccineIssueDateText.text = $"Issue Date: {vaccine.issueDate}";
+
+            if (vaccineValidUntilText != null) vaccineValidUntilText.text = $"Valid Until: {vaccine.validUntil}";
+
+            if (medicalFacilityText != null) medicalFacilityText.text = $"Medical Facility: {vaccine.facility}";
+        }
+    
+
+    private void SetupClearanceCertificate(NPCData npc)
+        {
+            if (clearanceDocPanel == null)
+                return;
+
+            ClearanceCertificateData clearance =
+                npc.clearanceDocument;
+
+            if (clearance == null)
             {
-                if (supportingDocTitleText != null) supportingDocTitleText.text = "CLEARANCE CERTIFICATE";
-                if (supportingDocStatusText != null) supportingDocStatusText.text = "Official Clear Status";
-                if (supportingDocExpiryText != null) supportingDocExpiryText.text = clearance.validUntil.ToString();
-                if (supportingDocSealGraphic != null) supportingDocSealGraphic.SetActive(clearance.hasOfficialMark);
+                clearanceDocPanel.SetActive(false);
+                return;
             }
-            else if (supp is VaccineCertificationData vaccine)
+
+            clearanceDocPanel.SetActive(true);
+
+            if (clearanceFirstNameText != null)
             {
-                if (supportingDocTitleText != null) supportingDocTitleText.text = "VACCINE CERTIFICATE";
-                if (supportingDocStatusText != null) supportingDocStatusText.text = $"Exposure: {vaccine.exposureStatus}";
-                if (supportingDocExpiryText != null) supportingDocExpiryText.text = vaccine.validUntil.ToString();
-                if (supportingDocSealGraphic != null) supportingDocSealGraphic.SetActive(vaccine.hasOfficialMark);
+                clearanceFirstNameText.text = $"First Name: {clearance.firstName}";
+            }
+
+            if (clearanceLastNameText != null)
+            {
+                clearanceLastNameText.text = $"Last Name: {clearance.lastName}";
+            }
+
+            if (clearenceDobText != null)
+            {
+                clearenceDobText.text = $"Date of Birth: {clearance.dateOfBirth}";
+            }
+
+            if (clearanceCountryText != null)
+            {
+                clearanceCountryText.text = $"Nationality: {clearance.nationality}";
+            }
+
+            if (clearancePortraitImage != null)
+            {
+                clearancePortraitImage.sprite = clearance.Photo;
+
+                clearancePortraitImage.enabled = clearance.Photo != null;
+            }
+
+            if (clearanceIssueDateText != null)
+            {
+                clearanceIssueDateText.text = $"Issue Date: {clearance.issueDate}";
+            }
+
+            if (clearanceValidUntilText != null)
+            {
+                clearanceValidUntilText.text = $"Valid Until: {clearance.validUntil}";
+            }
+
+            if (offenceText != null)
+            {
+                if (clearance.offences == null || clearance.offences.Count == 0)
+                {
+                    offenceText.text = "Offences: None";
+                }
+                else
+                {
+                    string offenceList = "Offences:\n";
+
+                    foreach (OffenceData offence in clearance.offences)
+                    {
+                        offenceList += $"- {offence.offenceName}\n";
+                    }
+
+                    offenceText.text = offenceList;
+                }
+            }
+
+            if (offenceCategoryText != null)
+            {
+                if (clearance.offences == null ||
+                    clearance.offences.Count == 0)
+                {
+                    offenceCategoryText.text = "Categories: None";
+                }
+                else
+                {
+                    string categoryList = "Categories:\n";
+
+                    foreach (OffenceData offence in clearance.offences)
+                    {
+                        categoryList += $"- {offence.category}\n";
+                    }
+
+                    offenceCategoryText.text = categoryList;
+                }
+            }
+
+            if (offenceMarkImage != null)
+            {
+                offenceMarkImage.enabled = clearance.hasOfficialMark;
             }
         }
     }
