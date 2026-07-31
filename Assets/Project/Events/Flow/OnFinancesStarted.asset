@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e74824927d6afad40bfc467078a32d70, type: 3}
-  m_Name: OnDayEndStarted
+  m_Name: OnFinancesStarted
   m_EditorClassIdentifier: Assembly-CSharp::Core.Events.VoidEventChannelSO

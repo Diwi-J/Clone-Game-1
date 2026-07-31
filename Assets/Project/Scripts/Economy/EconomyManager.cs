@@ -72,10 +72,13 @@ namespace Core.Economy
 
             if (data.CurrentMoneyAmount < data.RentCost)
             {
-                gm.TriggerGameOver("Could not pay rent.");
-                return;
+                data.MissedRentToday = true;
             }
-            gm.AddMoney(-data.RentCost );
+            else
+            {
+                gm.AddMoney(-data.RentCost);
+                data.MissedRentToday = false;
+            }   
 
             TryPaySoftExpense(gm, data.HeatCost, "heat");
             TryPaySoftExpense(gm, data.FoodCost, "food");

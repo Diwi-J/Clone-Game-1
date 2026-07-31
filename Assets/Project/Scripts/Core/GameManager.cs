@@ -41,11 +41,8 @@ namespace Core
         [Tooltip("Raised when the queue should start pulling applicants (after the day briefing is dismissed).")]
         public VoidEventChannelSO OnQueueStarted;
 
-        [Tooltip("RAISE THIS FROM THE QUEUE SYSTEM when the last applicant has been processed and the queue is empty.")]
-        public VoidEventChannelSO OnQueueEmpty;
-
         [Tooltip("Raised when day-end resolution (salary/expenses/bribes) should begin.")]
-        public VoidEventChannelSO OnDayEndStarted;
+        public VoidEventChannelSO OnFinancesStarted;
 
         [Tooltip("RAISE THIS FROM THE ECONOMY SYSTEM once the day's money has been fully resolved.")]
         public VoidEventChannelSO OnDayResolved;
@@ -77,20 +74,18 @@ namespace Core
 
         private void OnEnable()
         {
-            if (OnQueueEmpty != null) OnQueueEmpty.OnEventRaised += HandleQueueEmpty;
             if (OnDayResolved != null) OnDayResolved.OnEventRaised += HandleDayResolved;
         }
 
         private void OnDisable()
         {
-            if (OnQueueEmpty != null) OnQueueEmpty.OnEventRaised -= HandleQueueEmpty;
             if (OnDayResolved != null) OnDayResolved.OnEventRaised -= HandleDayResolved;
         }
 
         private void Start()
         {
             // Boots straight into the main menu.
-            StateMachine.ChangeState(new MainMenuState(this));
+            StateMachine.ChangeState(new DayStartedState(this));
         }
 
         private void Update()
@@ -105,27 +100,25 @@ namespace Core
         /// <summary>Call this from a "Start Game" / "Continue" UI button.</summary>
         public void StartNewDay()
         {
-            StateMachine.ChangeState(new DayStartState(this));
+            StateMachine.ChangeState(new DayStartedState(this));
         }
 
         /// <summary>Call this once the Day Start briefing/rules screen has been dismissed.</summary>
         public void BeginQueue()
         {
-            StateMachine.ChangeState(new QueueState(this));
+            StateMachine.ChangeState(new QueueStartedState(this, Data.QueueDurationSeconds));
         }
 
-        private void HandleQueueEmpty()
+        /// <summary>Call this when the queue's timer runs out (see QueueStartedState.Tick()).</summary>
+        public void EndQueue()
         {
-            StateMachine.ChangeState(new DayEndState(this));
+            StateMachine.ChangeState(new FinancesStartedState(this));
         }
 
+        /// <summary>This gets called immediatly as soon as the QueueTimer reaches its end</summary>
         private void HandleDayResolved()
         {
-            if (Data.IsGameOver)
-                StateMachine.ChangeState(new GameOverState(this));
-            else
-                Data.CurrentDay++;
-                StartNewDay();
+            StateMachine.ChangeState(new DayResolvedState(this));
         }
 
         /// <summary>Call this from anywhere (Economy system, an event trigger, etc.) to end the run.</summary>
@@ -133,7 +126,8 @@ namespace Core
         {
             Data.GameOverReason = reason;
             Data.IsGameOver = true;
-            StateMachine.ChangeState(new GameOverState(this));
+            Data.CurrentPhase = DayPhase.GameOver;
+            OnGameOver?.Raise();
         }
 
         // ==== Convenience helpers for other systems ==============================
@@ -143,7 +137,7 @@ namespace Core
         /// of writing directly to Data.CurrentMoney from other scripts (a negative amount
         /// subtracts).
         /// </summary>
-        
+
         public void AddMoney(int amount)
         {
             Data.CurrentMoneyAmount += amount;

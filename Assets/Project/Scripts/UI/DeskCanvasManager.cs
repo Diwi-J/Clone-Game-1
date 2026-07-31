@@ -71,11 +71,8 @@ namespace Core.UI
                 if (documentDisplayUI != null) documentDisplayUI.ClearAllDocuments();
                 if (decisionUIController != null) decisionUIController.SetButtonsInteractable(false);
 
-                Debug.Log("[DeskCanvasManager] All daily applicants processed. Raising OnQueueEmpty.");
-                if (GameManager.Instance != null && GameManager.Instance.OnQueueEmpty != null)
-                {
-                    GameManager.Instance.OnQueueEmpty.Raise();
-                }
+                Debug.Log("[DeskCanvasManager] No applicant is currently availiable. " +
+                          "- Waiting for [QueueStartedState] timer to run dry");
                 return;
             }
 

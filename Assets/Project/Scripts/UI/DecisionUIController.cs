@@ -24,12 +24,6 @@ namespace Core.UI
         [SerializeField] private Text feedbackText;
         [SerializeField] private float feedbackDisplayDuration = 2f;
 
-        [Header("Economy & Penalty Tuning")]
-        [SerializeField] private int correctDecisionSalary = 50;
-        [SerializeField] private int skinwalkerKillBonus = 100;
-        [SerializeField] private int innocentKillPenalty = -100;
-        [SerializeField] private int skinwalkerEscapedPenalty = -100;
-
         private bool isProcessingDecision = false;
 
         private void Start()
@@ -107,11 +101,6 @@ namespace Core.UI
                 if (result.playerDecision == PlayerDecision.Kill)
                 {
                     data.SkinwalkersTerminatedToday++;
-                    GameManager.Instance.AddMoney(correctDecisionSalary + skinwalkerKillBonus);
-                }
-                else
-                {
-                    GameManager.Instance.AddMoney(correctDecisionSalary);
                 }
             }
             else
@@ -120,12 +109,10 @@ namespace Core.UI
                 if (result.outcome == DecisionOutcome.HumanKilled)
                 {
                     data.InnocentsTerminatedToday++;
-                    GameManager.Instance.AddMoney(innocentKillPenalty);
                 }
                 else if (result.outcome == DecisionOutcome.SkinwalkerAccepted)
                 {
                     data.SkinwalkersMissedToday++;
-                    GameManager.Instance.AddMoney(skinwalkerEscapedPenalty);
                     data.FamilyHealth = Mathf.Max(0, data.FamilyHealth - 25);
                 }
             }

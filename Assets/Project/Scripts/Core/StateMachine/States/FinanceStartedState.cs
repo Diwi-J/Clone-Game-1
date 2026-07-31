@@ -11,11 +11,11 @@ namespace Core.StateMachine.States
     /// them to gm.Data, and then raise gm.OnDayResolved when it's done. GameManager listens
     /// for THAT and decides whether to start a new day or trigger Game Over.
     /// </summary>
-    public class DayEndState : IState
+    public class FinancesStartedState : IState
     {
         private readonly GameManager gm;
 
-        public DayEndState(GameManager gameManager)
+        public FinancesStartedState(GameManager gameManager)
         {
             gm = gameManager;
         }
@@ -28,7 +28,7 @@ namespace Core.StateMachine.States
             // Economy System owner: calculate salary/expenses/bribes/punishments when you
             // see this event, apply the results to gm.Data (or via gm.AddMoney etc.), then
             // raise gm.OnDayResolved once everything is settled.
-            gm.OnDayEndStarted.Raise();
+            gm.OnFinancesStarted?.Raise();
         }
 
         public void Tick() { }
@@ -36,7 +36,7 @@ namespace Core.StateMachine.States
         public void Exit()
         {
             gm.Data.CurrentDay++;
-            Debug.Log("[DayEndState] Exited.");
+            Debug.Log("[FinanceStartedState] Exited.");
         }
     }
 }
