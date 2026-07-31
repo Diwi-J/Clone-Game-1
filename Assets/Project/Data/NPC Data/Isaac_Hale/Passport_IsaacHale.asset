@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd2037fb3c73004ab30a9be015f39a6, type: 3}
-  m_Name: Passport_MarcusReed
+  m_Name: Passport_IsaacHale
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
   hasOfficialMark: 1
   documentType: 1
-  passportNumber: ATZ-1002
-  firstName: Marcus
-  lastName: Reed
+  passportNumber: ATZ-1003
+  firstName: Isaac
+  lastName: Hale
   country: 0
   dateOfBirth:
-    day: 22
-    month: 9
-    year: 1949
+    day: 5
+    month: 6
+    year: 1955
   sex: 0
-  issuingCity: 0
+  issuingCity: 1
   expirationDate:
-    day: 22
-    month: 9
-    year: 1987
+    day: 11
+    month: 12
+    year: 1989
   portrait: {fileID: 0}

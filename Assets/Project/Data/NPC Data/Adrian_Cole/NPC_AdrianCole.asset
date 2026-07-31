@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_AmeliaHart
+  m_Name: NPC_AdrianCole
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Amelia
-  lastName: Hart
+  firstName: Adrian
+  lastName: Cole
   dateOfBirth:
-    day: 14
-    month: 3
-    year: 1957
-  nationality: 0
-  sex: 1
+    day: 11
+    month: 5
+    year: 1956
+  nationality: 1
+  sex: 0
   portrait: {fileID: 0}
-  entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1001
-  idNumber: AZ-571403
+  entryPurpose: 5
+  intendedStayDays: 10
+  passportNumber: ATG-2007
+  idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: 77cf7c3067ba4c045b7ef6774d4f782a, type: 2}
-  identificationDocument: {fileID: 11400000, guid: bb76d56640a3cdc439fa9e55baa3cef1, type: 2}
+  passportDocument: {fileID: 11400000, guid: 9626b57430b9de54cb4f411ad58e3eec, type: 2}
+  identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}
   clearanceDocument: {fileID: 0}

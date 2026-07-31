@@ -2005,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24fae2738fd00547a37dc27e1fceb83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DecisionUIController
-  decisionManager: {fileID: 0}
+  decisionManager: {fileID: 1952096460}
   deskCanvasManager: {fileID: 1174451095}
   acceptButton: {fileID: 1420159460}
   rejectButton: {fileID: 1720196464}
@@ -2094,11 +2094,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DeskCanvasManager
   documentDisplayUI: {fileID: 1174451094}
   decisionUIController: {fileID: 1174451093}
-  announcementUI: {fileID: 0}
-  todayApplicantQueue:
-  - {fileID: 11400000, guid: aea6b81589219d5429218de56fe77c69, type: 2}
-  - {fileID: 11400000, guid: e4d9fe0b278467d45b2118b0c936b6b1, type: 2}
-  - {fileID: 11400000, guid: 5a612168b2a92144d837016f5027d057, type: 2}
+  announcementUI: {fileID: 1952096461}
+  dailyQueues: []
+  testDay: 1
 --- !u!114 &1174451096
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3310,6 +3308,8 @@ GameObject:
   - component: {fileID: 1952096457}
   - component: {fileID: 1952096456}
   - component: {fileID: 1952096460}
+  - component: {fileID: 1952096461}
+  - component: {fileID: 1952096462}
   m_Layer: 0
   m_Name: Managers
   m_TagString: Untagged
@@ -3376,6 +3376,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DecisionManager
   documentVerification: {fileID: 1952096456}
+--- !u!114 &1952096461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c4988d18469b246a608d93e1a8ddb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnouncementUI
+  announcementText: {fileID: 0}
+  duration: 2
+--- !u!114 &1952096462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1952096455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 822c89cffaf0db44b942625e806fd0bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DeskCanvasManager
+  documentDisplayUI: {fileID: 1174451094}
+  decisionUIController: {fileID: 1174451093}
+  announcementUI: {fileID: 1952096461}
+  dailyQueues:
+  - dayNumber: 1
+    applicants:
+    - {fileID: 0}
+  - dayNumber: 2
+    applicants: []
+  - dayNumber: 3
+    applicants: []
+  testDay: 1
 --- !u!1 &1998051363
 GameObject:
   m_ObjectHideFlags: 0
