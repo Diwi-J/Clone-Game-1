@@ -192,15 +192,6 @@ namespace Core.UI
                 decisionUIController.SetButtonsInteractable(false);
             }
 
-            Debug.Log(
-                "DeskCanvasManager: All applicants for the current " + "day have been processed."
-            );
-
-            if (GameManager.Instance != null &&
-                GameManager.Instance.OnQueueEmpty != null)
-            {
-                GameManager.Instance.OnQueueEmpty.Raise();
-            }
         }
 
         public void SetDailyQueue(List<NPCData> applicants)
