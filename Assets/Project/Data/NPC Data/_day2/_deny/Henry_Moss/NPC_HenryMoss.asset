@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_HenryMoss
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Henry
+  lastName: Moss
+  dateOfBirth:
+    day: 12
+    month: 3
+    year: 1948
+  nationality: 1
+  sex: 0
+  portrait: {fileID: 0}
+  entryPurpose: 1
+  intendedStayDays: 40
+  passportNumber: ATG-8894
+  idNumber: 
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: cdc199a13f8ec8544b9913c2bd5f1277, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: a34f31b01ba25b147b6189b62f985b1b, type: 2}
+  entryPermit: {fileID: 11400000, guid: 4ba88589475ebbd45a2c1f772a1de19b, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 0}
