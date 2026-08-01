@@ -72,6 +72,7 @@ namespace Core.UI
         [SerializeField] private TMP_Text vaccineIssueDateText;
         [SerializeField] private TMP_Text vaccineValidUntilText;
         [SerializeField] private TMP_Text medicalFacilityText;
+        [SerializeField] private Image vaccineOfficialMark;
 
 
         /// <summary>
