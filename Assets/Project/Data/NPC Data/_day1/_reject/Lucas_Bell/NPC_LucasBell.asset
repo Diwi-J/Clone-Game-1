@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_LucasBell
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: 
+  lastName: 
+  dateOfBirth:
+    day: 1
+    month: 1
+    year: 0
+  nationality: 0
+  sex: 0
+  portrait: {fileID: 0}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: 
+  idNumber: 
+  isSkinwalker: 0
+  passportDocument: {fileID: 0}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 0}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 0}
