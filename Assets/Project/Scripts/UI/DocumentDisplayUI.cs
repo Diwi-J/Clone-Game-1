@@ -19,6 +19,7 @@ namespace Core.UI
         [SerializeField] private TMP_Text passportSexText;
         [SerializeField] private TMP_Text passportNumberText;
         [SerializeField] private TMP_Text passportExpiryText;
+        [SerializeField] private TMP_Text passportIssuingCityText;
         [SerializeField] private Image passportPortraitImage;
         [SerializeField] private Image officialPassportMarkImage;
 
@@ -130,19 +131,21 @@ namespace Core.UI
 
             passportPanel.SetActive(true);
 
-            if (firstNamePassportText != null) firstNamePassportText.text = $"First Name: {passport.firstName}";
+            if (firstNamePassportText != null) firstNamePassportText.text = passport.firstName.ToString();
 
-            if (lastNamePassportText != null) lastNamePassportText.text = $"Last Name: {passport.lastName}";
+            if (lastNamePassportText != null) lastNamePassportText.text = passport.lastName.ToString();
 
-            if (passportCountryText != null) passportCountryText.text = $"Country: {passport.country}";
+            if (passportCountryText != null) passportCountryText.text = passport.country.ToString();
 
-            if (passportDobText != null) passportDobText.text = $"Date of Birth: {passport.dateOfBirth}";
+            if (passportDobText != null) passportDobText.text =passport.dateOfBirth.ToString();
 
-            if (passportSexText != null) passportSexText.text = $"Sex: {passport.sex}";
+            if (passportSexText != null) passportSexText.text = passport.sex.ToString();
 
-            if (passportNumberText != null) passportNumberText.text = $"Passport Number: {passport.passportNumber}";
+            if (passportNumberText != null) passportNumberText.text = passport.passportNumber;
 
-            if (passportExpiryText != null) passportExpiryText.text = $"Expiry Date: {passport.expirationDate}";
+            if (passportExpiryText != null) passportExpiryText.text = passport.expirationDate.ToString();
+
+            if (passportIssuingCityText != null) passportIssuingCityText.text = passport.issuingCity.ToString();
 
             if (passportPortraitImage != null)
             {
@@ -172,13 +175,13 @@ namespace Core.UI
 
             idPanel.SetActive(true);
 
-            if (firstNameIDText != null) firstNameIDText.text = $"First Name: {idCard.firstName}";
+            if (firstNameIDText != null) firstNameIDText.text = idCard.firstName;
 
-            if (lastNameIDText != null) lastNameIDText.text = $"Last Name: {idCard.lastName}";
+            if (lastNameIDText != null) lastNameIDText.text = idCard.lastName;
 
-            if (districtIssuedText != null) districtIssuedText.text = $"District Issued: {idCard.districtIssued}";
+            if (districtIssuedText != null) districtIssuedText.text = idCard.districtIssued.ToString();
 
-            if (idDobText != null) idDobText.text = $"Date of Birth: {idCard.dateOfBirth}";
+            if (idDobText != null) idDobText.text = idCard.dateOfBirth.ToString();
 
 
             if (idPortraitImage != null)
@@ -204,11 +207,11 @@ namespace Core.UI
 
             workPermitPanel.SetActive(true);
 
-            if (workPanelHolderNameText != null) workPanelHolderNameText.text = $"Holder: {workPermit.HolderName}";
+            if (workPanelHolderNameText != null) workPanelHolderNameText.text = workPermit.HolderName.ToString();
 
-            if (workFieldText != null) workFieldText.text = $"Work Field: {workPermit.workField}";
+            if (workFieldText != null) workFieldText.text = workPermit.workField.ToString();
 
-            if (validUntilDate != null) validUntilDate.text = $"Valid Until: {workPermit.validUntil}";
+            if (validUntilDate != null) validUntilDate.text = workPermit.validUntil.ToString();
         }
 
         private void SetupEntryPermit(NPCData npc)
@@ -226,17 +229,17 @@ namespace Core.UI
 
             entryPermitPanel.SetActive(true);
 
-            if (entryPermitFirstNameText != null) entryPermitFirstNameText.text = $"First Name: {permit.firstName}";
+            if (entryPermitFirstNameText != null) entryPermitFirstNameText.text = permit.firstName.ToString();
 
-            if (entryPermitLastNameText != null) entryPermitLastNameText.text = $"Last Name: {permit.lastName}";
+            if (entryPermitLastNameText != null) entryPermitLastNameText.text = permit.lastName.ToString();
 
-            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = $"Passport Number: {permit.passportNumber}";
+            if (entryPermitPassportNumText != null) entryPermitPassportNumText.text = permit.passportNumber.ToString();
 
-            if (entryPermitPurposeText != null) entryPermitPurposeText.text = $"Purpose: {permit.purpose}";
+            if (entryPermitPurposeText != null) entryPermitPurposeText.text = permit.purpose.ToString();
 
-            if (entryPermitEntryByDateText != null) entryPermitEntryByDateText.text = $"Entry By: {permit.entryByDate}";
+            if (entryPermitEntryByDateText != null) entryPermitEntryByDateText.text = permit.entryByDate.ToString();
 
-            if (stayDurationText != null) stayDurationText.text = $"Duration: {permit.durationDays} days";
+            if (stayDurationText != null) stayDurationText.text = $"{permit.durationDays} days";
 
             if (entryPermitSealGraphic != null)
             {
@@ -261,23 +264,23 @@ namespace Core.UI
 
             vaccineDocPanel.SetActive(true);
 
-            if (vaccineFirstNameText != null) vaccineFirstNameText.text = $"First Name: {vaccine.firstName}";
+            if (vaccineFirstNameText != null) vaccineFirstNameText.text = vaccine.firstName;
 
-            if (vaccineLastNameText != null) vaccineLastNameText.text = $"Last Name: {vaccine.lastName}";
+            if (vaccineLastNameText != null) vaccineLastNameText.text = vaccine.lastName;
 
-            if (vaccineDobText != null) vaccineDobText.text = $"Date of Birth: {vaccine.dateOfBirth}";
+            if (vaccineDobText != null) vaccineDobText.text =   vaccine.dateOfBirth.ToString();
 
-            if (vaccineTypeText != null) vaccineTypeText.text = $"Vaccine Type: {vaccine.vaccineType}";
+            if (vaccineTypeText != null) vaccineTypeText.text = vaccine.vaccineType.ToString();
 
-            if (vaccineDosesText != null) vaccineDosesText.text = $"Doses: {vaccine.doses}";
+            if (vaccineDosesText != null) vaccineDosesText.text = vaccine.doses.ToString();
 
-            if (exposureStatusText != null) exposureStatusText.text = $"Exposure: {vaccine.exposureStatus}";
+            if (exposureStatusText != null) exposureStatusText.text = vaccine.exposureStatus.ToString();
 
-            if (vaccineIssueDateText != null) vaccineIssueDateText.text = $"Issue Date: {vaccine.issueDate}";
+            if (vaccineIssueDateText != null) vaccineIssueDateText.text = vaccine.issueDate.ToString();
 
-            if (vaccineValidUntilText != null) vaccineValidUntilText.text = $"Valid Until: {vaccine.validUntil}";
+            if (vaccineValidUntilText != null) vaccineValidUntilText.text = vaccine.validUntil.ToString();
 
-            if (medicalFacilityText != null) medicalFacilityText.text = $"Medical Facility: {vaccine.facility}";
+            if (medicalFacilityText != null) medicalFacilityText.text = vaccine.facility.ToString();
         }
     
 
@@ -299,22 +302,22 @@ namespace Core.UI
 
             if (clearanceFirstNameText != null)
             {
-                clearanceFirstNameText.text = $"First Name: {clearance.firstName}";
+                clearanceFirstNameText.text = clearance.firstName.ToString();
             }
 
             if (clearanceLastNameText != null)
             {
-                clearanceLastNameText.text = $"Last Name: {clearance.lastName}";
+                clearanceLastNameText.text = clearance.lastName.ToString();
             }
 
             if (clearenceDobText != null)
             {
-                clearenceDobText.text = $"Date of Birth: {clearance.dateOfBirth}";
+                clearenceDobText.text = clearance.dateOfBirth.ToString();
             }
 
             if (clearanceCountryText != null)
             {
-                clearanceCountryText.text = $"Nationality: {clearance.nationality}";
+                clearanceCountryText.text = clearance.nationality.ToString();
             }
 
             if (clearancePortraitImage != null)
@@ -326,12 +329,12 @@ namespace Core.UI
 
             if (clearanceIssueDateText != null)
             {
-                clearanceIssueDateText.text = $"Issue Date: {clearance.issueDate}";
+                clearanceIssueDateText.text = clearance.issueDate.ToString();
             }
 
             if (clearanceValidUntilText != null)
             {
-                clearanceValidUntilText.text = $"Valid Until: {clearance.validUntil}";
+                clearanceValidUntilText.text = clearance.validUntil.ToString();
             }
 
             if (offenceText != null)
