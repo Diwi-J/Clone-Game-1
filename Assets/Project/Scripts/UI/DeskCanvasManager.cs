@@ -80,6 +80,8 @@ namespace Core.UI
 
         private void HandleQueueStarted()
         {
+            Debug.Log("[DeskCanvasManager] Queue started event received.");
+
             int currentDay = GetCurrentDay();
 
             LoadQueueForDay(currentDay);
@@ -142,6 +144,16 @@ namespace Core.UI
                 FinishCurrentQueue();
                 return;
             }
+
+            if (documentDisplayUI != null)
+            {
+                documentDisplayUI.ClearAllDocuments();
+            }
+
+            Debug.Log(
+    $"[DeskCanvasManager] Queue count: {currentDayQueue.Count}, " +
+    $"current index: {currentApplicantIndex}"
+);
 
             CurrentNPC =
                 currentDayQueue[currentApplicantIndex];

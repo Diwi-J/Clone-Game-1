@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 namespace Core.UI
 {
@@ -11,68 +12,68 @@ namespace Core.UI
     {
         [Header("Passport UI Panel")]
         [SerializeField] private GameObject passportPanel;
-        [SerializeField] private Text firstNamePassportText;
-        [SerializeField] private Text lastNamePassportText;
-        [SerializeField] private Text passportCountryText;
-        [SerializeField] private Text passportDobText;
-        [SerializeField] private Text passportSexText;
-        [SerializeField] private Text passportNumberText;
-        [SerializeField] private Text passportExpiryText;
+        [SerializeField] private TMP_Text firstNamePassportText;
+        [SerializeField] private TMP_Text lastNamePassportText;
+        [SerializeField] private TMP_Text passportCountryText;
+        [SerializeField] private TMP_Text passportDobText;
+        [SerializeField] private TMP_Text passportSexText;
+        [SerializeField] private TMP_Text passportNumberText;
+        [SerializeField] private TMP_Text passportExpiryText;
         [SerializeField] private Image passportPortraitImage;
         [SerializeField] private Image officialPassportMarkImage;
 
         [Header("ID Document UI Panel")]
         [SerializeField] private GameObject idPanel;
-        [SerializeField] private Text firstNameIDText;
-        [SerializeField] private Text lastNameIDText;
-        [SerializeField] private Text districtIssuedText;
-        [SerializeField] private Text idCountryText;
-        [SerializeField] private Text idDobText;
-        [SerializeField] private Text idNumberText;
+        [SerializeField] private TMP_Text firstNameIDText;
+        [SerializeField] private TMP_Text lastNameIDText;
+        [SerializeField] private TMP_Text districtIssuedText;
+        [SerializeField] private TMP_Text idCountryText;
+        [SerializeField] private TMP_Text idDobText;
+        [SerializeField] private TMP_Text idNumberText;
         [SerializeField] private Image idPortraitImage;
 
         [Header("Work Permit UI Panel")]
         [SerializeField] private GameObject workPermitPanel;
-        [SerializeField] private Text workPanelHolderNameText;
-        [SerializeField] private Text workFieldText;
-        [SerializeField] private Text validUntilDate;
+        [SerializeField] private TMP_Text workPanelHolderNameText;
+        [SerializeField] private TMP_Text workFieldText;
+        [SerializeField] private TMP_Text validUntilDate;
 
 
         [Header("Entry Permit UI Panel")]
         [SerializeField] private GameObject entryPermitPanel;
-        [SerializeField] private Text entryPermitFirstNameText;
-        [SerializeField] private Text entryPermitLastNameText;
-        [SerializeField] private Text entryPermitPassportNumText;
-        [SerializeField] private Text entryPermitPurposeText;
-        [SerializeField] private Text entryPermitEntryByDateText;
-        [SerializeField] private Text stayDurationText;
+        [SerializeField] private TMP_Text entryPermitFirstNameText;
+        [SerializeField] private TMP_Text entryPermitLastNameText;
+        [SerializeField] private TMP_Text entryPermitPassportNumText;
+        [SerializeField] private TMP_Text entryPermitPurposeText;
+        [SerializeField] private TMP_Text entryPermitEntryByDateText;
+        [SerializeField] private TMP_Text stayDurationText;
         [SerializeField] private Image entryPermitSealGraphic;
 
         [Header("Clearance Certificate UI Panel")]
         [SerializeField] private GameObject clearanceDocPanel;
-        [SerializeField] private Text clearanceFirstNameText;
-        [SerializeField] private Text clearanceLastNameText;
-        [SerializeField] private Text clearenceDobText;
-        [SerializeField] private Text clearanceCountryText;
+        [SerializeField] private TMP_Text clearanceFirstNameText;
+        [SerializeField] private TMP_Text clearanceLastNameText;
+        [SerializeField] private TMP_Text clearenceDobText;
+        [SerializeField] private TMP_Text clearanceCountryText;
         [SerializeField] private Image clearancePortraitImage;
-        [SerializeField] private Text offenceText;
-        [SerializeField] private Text clearanceIssueDateText;
-        [SerializeField] private Text clearanceValidUntilText;
-        [SerializeField] private Text offenceCategoryText;
+        [SerializeField] private TMP_Text offenceText;
+        [SerializeField] private TMP_Text clearanceIssueDateText;
+        [SerializeField] private TMP_Text clearanceValidUntilText;
+        [SerializeField] private TMP_Text offenceCategoryText;
         [SerializeField] private Image offenceMarkImage;
 
 
         [Header("Vaccine Ceritificate UI Panel")]
         [SerializeField] private GameObject vaccineDocPanel;
-        [SerializeField] private Text vaccineFirstNameText;
-        [SerializeField] private Text vaccineLastNameText;
-        [SerializeField] private Text vaccineDobText;
-        [SerializeField] private Text vaccineTypeText;
-        [SerializeField] private Text vaccineDosesText;
-        [SerializeField] private Text exposureStatusText;
-        [SerializeField] private Text vaccineIssueDateText;
-        [SerializeField] private Text vaccineValidUntilText;
-        [SerializeField] private Text medicalFacilityText;
+        [SerializeField] private TMP_Text vaccineFirstNameText;
+        [SerializeField] private TMP_Text vaccineLastNameText;
+        [SerializeField] private TMP_Text vaccineDobText;
+        [SerializeField] private TMP_Text vaccineTypeText;
+        [SerializeField] private TMP_Text vaccineDosesText;
+        [SerializeField] private TMP_Text exposureStatusText;
+        [SerializeField] private TMP_Text vaccineIssueDateText;
+        [SerializeField] private TMP_Text vaccineValidUntilText;
+        [SerializeField] private TMP_Text medicalFacilityText;
 
 
         /// <summary>
@@ -80,9 +81,15 @@ namespace Core.UI
         /// </summary>
         public void DisplayNPCDocuments(NPCData npc)
         {
+            Debug.Log(
+        npc == null
+            ? "[DocumentDisplayUI] NPC received was null."
+            : $"[DocumentDisplayUI] Received NPC: {npc.FullName}"
+    );
+            ClearAllDocuments();
+
             if (npc == null)
             {
-                ClearAllDocuments();
                 return;
             }
 
@@ -111,6 +118,8 @@ namespace Core.UI
 
         private void SetupPassport(NPCData npc)
         {
+            ClearAllDocuments();
+
             if (passportPanel == null) return;
             PassportDocumentData passport = npc.passportDocument;
 
