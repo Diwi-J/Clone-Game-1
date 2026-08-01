@@ -12,21 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
   m_Name: NPC_EliseShaw
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: 
-  lastName: 
+  firstName: Elise
+  lastName: Shaw
   dateOfBirth:
-    day: 1
-    month: 1
-    year: 0
+    day: 13
+    month: 9
+    year: 1963
   nationality: 0
-  sex: 0
+  sex: 1
   portrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
-  passportNumber: 
+  passportNumber: ATZ-1012
   idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 0}
+  passportDocument: {fileID: 11400000, guid: d19d7764dd26c92498db05ef90cfb295, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}

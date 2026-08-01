@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_MayaQuinn
+  m_Name: NPC_IngridFalk
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Maya
-  lastName: Quinn
+  firstName: Ingrid
+  lastName: Falk
   dateOfBirth:
-    day: 30
-    month: 1
-    year: 1960
-  nationality: 0
+    day: 9
+    month: 6
+    year: 1964
+  nationality: 6
   sex: 1
   portrait: {fileID: 0}
-  entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1011
-  idNumber: MQ-346783
+  entryPurpose: 1
+  intendedStayDays: 180
+  passportNumber: UN-3981
+  idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: b15a193fe013f0e4a9087b4969f5bc73, type: 2}
+  passportDocument: {fileID: 11400000, guid: c9712650a6bf83648bfc97adb70f177f, type: 2}
   identificationDocument: {fileID: 0}
-  workPermit: {fileID: 0}
-  entryPermit: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: fd2df6a47147dad45aeedc1933c784e7, type: 2}
+  entryPermit: {fileID: 11400000, guid: 665185c0c27f9aa448f5dd31ecd42273, type: 2}
   clearanceDocument: {fileID: 0}
   vaccineCertification: {fileID: 0}

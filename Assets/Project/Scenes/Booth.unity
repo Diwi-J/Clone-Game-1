@@ -565,7 +565,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DayManager
   onDayStarted: {fileID: 11400000, guid: fa53d73b67812674b996beb3c2609c7e, type: 2}
   onDayEndStarted: {fileID: 11400000, guid: decaa7d111fab4047bfaa2ac1eee2d80, type: 2}
-  homeCountry: Meowland
 --- !u!4 &99839987
 Transform:
   m_ObjectHideFlags: 0
@@ -2631,10 +2630,6 @@ MonoBehaviour:
   feedbackBanner: {fileID: 311748771}
   feedbackText: {fileID: 269190514}
   feedbackDisplayDuration: 2
-  correctDecisionSalary: 50
-  skinwalkerKillBonus: 100
-  innocentKillPenalty: -100
-  skinwalkerEscapedPenalty: -100
 --- !u!114 &924662373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2648,31 +2643,56 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DocumentDisplayUI
   passportPanel: {fileID: 1686764217}
-  passportHolderNameText: {fileID: 1158210226}
+  firstNamePassportText: {fileID: 0}
+  lastNamePassportText: {fileID: 0}
   passportCountryText: {fileID: 734302638}
   passportDobText: {fileID: 1187495693}
   passportSexText: {fileID: 35938442}
   passportNumberText: {fileID: 1887687730}
   passportExpiryText: {fileID: 854319273}
   passportPortraitImage: {fileID: 1411518641}
+  officialPassportMarkImage: {fileID: 0}
   idPanel: {fileID: 753649623}
-  idHolderNameText: {fileID: 585898180}
+  firstNameIDText: {fileID: 0}
+  lastNameIDText: {fileID: 0}
+  districtIssuedText: {fileID: 0}
   idCountryText: {fileID: 1321540955}
   idDobText: {fileID: 304960392}
-  idHeightText: {fileID: 1713177244}
-  idWeightText: {fileID: 612960668}
+  idNumberText: {fileID: 0}
+  idPortraitImage: {fileID: 0}
+  workPermitPanel: {fileID: 0}
+  workPanelHolderNameText: {fileID: 0}
+  workFieldText: {fileID: 0}
+  validUntilDate: {fileID: 0}
   entryPermitPanel: {fileID: 1198745826}
-  entryPermitNameText: {fileID: 84818264}
+  entryPermitFirstNameText: {fileID: 0}
+  entryPermitLastNameText: {fileID: 0}
   entryPermitPassportNumText: {fileID: 580651354}
   entryPermitPurposeText: {fileID: 287195368}
   entryPermitEntryByDateText: {fileID: 126396141}
+  stayDurationText: {fileID: 0}
   entryPermitSealGraphic: {fileID: 2017194444}
-  supportingDocPanel: {fileID: 19284711}
-  supportingDocTitleText: {fileID: 321955340}
-  supportingDocHolderNameText: {fileID: 854172838}
-  supportingDocStatusText: {fileID: 760907722}
-  supportingDocExpiryText: {fileID: 198388459}
-  supportingDocSealGraphic: {fileID: 1708688399}
+  clearanceDocPanel: {fileID: 0}
+  clearanceFirstNameText: {fileID: 0}
+  clearanceLastNameText: {fileID: 0}
+  clearenceDobText: {fileID: 0}
+  clearanceCountryText: {fileID: 0}
+  clearancePortraitImage: {fileID: 0}
+  offenceText: {fileID: 0}
+  clearanceIssueDateText: {fileID: 0}
+  clearanceValidUntilText: {fileID: 0}
+  offenceCategoryText: {fileID: 0}
+  offenceMarkImage: {fileID: 0}
+  vaccineDocPanel: {fileID: 0}
+  vaccineFirstNameText: {fileID: 0}
+  vaccineLastNameText: {fileID: 0}
+  vaccineDobText: {fileID: 0}
+  vaccineTypeText: {fileID: 0}
+  vaccineDosesText: {fileID: 0}
+  exposureStatusText: {fileID: 0}
+  vaccineIssueDateText: {fileID: 0}
+  vaccineValidUntilText: {fileID: 0}
+  medicalFacilityText: {fileID: 0}
 --- !u!114 &924662374
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2687,10 +2707,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Core.UI.DeskCanvasManager
   documentDisplayUI: {fileID: 924662373}
   decisionUIController: {fileID: 924662372}
-  todayApplicantQueue:
-  - {fileID: 11400000, guid: aea6b81589219d5429218de56fe77c69, type: 2}
-  - {fileID: 11400000, guid: e4d9fe0b278467d45b2118b0c936b6b1, type: 2}
-  - {fileID: 11400000, guid: 5a612168b2a92144d837016f5027d057, type: 2}
+  announcementUI: {fileID: 0}
+  dailyQueues: []
+  testDay: 1
 --- !u!114 &924662375
 MonoBehaviour:
   m_ObjectHideFlags: 0

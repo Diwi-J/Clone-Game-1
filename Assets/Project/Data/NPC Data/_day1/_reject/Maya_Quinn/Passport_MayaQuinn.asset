@@ -13,20 +13,20 @@ MonoBehaviour:
   m_Name: Passport_MayaQuinn
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
-  hasOfficialMark: 1
-  documentType: 0
-  passportNumber: 
-  firstName: 
-  lastName: 
+  hasOfficialMark: 0
+  documentType: 1
+  passportNumber: ATZ-1011
+  firstName: Maya
+  lastName: Quinn
   country: 0
   dateOfBirth:
-    day: 1
+    day: 30
     month: 1
-    year: 0
-  sex: 0
-  issuingCity: 0
+    year: 1960
+  sex: 1
+  issuingCity: 1
   expirationDate:
-    day: 1
-    month: 1
-    year: 0
+    day: 25
+    month: 4
+    year: 1987
   portrait: {fileID: 0}

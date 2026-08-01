@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_MayaQuinn
+  m_Name: NPC_ViktorDane
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Maya
-  lastName: Quinn
+  firstName: Viktor
+  lastName: Dane
   dateOfBirth:
-    day: 30
+    day: 25
     month: 1
-    year: 1960
-  nationality: 0
-  sex: 1
+    year: 1950
+  nationality: 3
+  sex: 0
   portrait: {fileID: 0}
-  entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1011
-  idNumber: MQ-346783
+  entryPurpose: 1
+  intendedStayDays: 365
+  passportNumber: KOL-2015
+  idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: b15a193fe013f0e4a9087b4969f5bc73, type: 2}
+  passportDocument: {fileID: 11400000, guid: fa6ead588b555e94da7f5876ad96f6af, type: 2}
   identificationDocument: {fileID: 0}
-  workPermit: {fileID: 0}
-  entryPermit: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: e84c2368ceb09fc48832a7c40c995e38, type: 2}
+  entryPermit: {fileID: 11400000, guid: 9d9dd9503ed107049aed5ff79bedb897, type: 2}
   clearanceDocument: {fileID: 0}
   vaccineCertification: {fileID: 0}

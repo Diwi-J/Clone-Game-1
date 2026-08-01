@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_MayaQuinn
+  m_Name: NPC_OmarSayeed
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Maya
-  lastName: Quinn
+  firstName: Omar
+  lastName: Sayeed
   dateOfBirth:
-    day: 30
-    month: 1
-    year: 1960
-  nationality: 0
-  sex: 1
+    day: 10
+    month: 10
+    year: 1958
+  nationality: 4
+  sex: 0
   portrait: {fileID: 0}
   entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1011
-  idNumber: MQ-346783
+  intendedStayDays: 21
+  passportNumber: OBR-5916
+  idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: b15a193fe013f0e4a9087b4969f5bc73, type: 2}
+  passportDocument: {fileID: 11400000, guid: edd8a0459afe428499d49e2089f81ad3, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
-  entryPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: 57d4b82f26a29f74881e4b710130e708, type: 2}
   clearanceDocument: {fileID: 0}
   vaccineCertification: {fileID: 0}

@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd2037fb3c73004ab30a9be015f39a6, type: 3}
-  m_Name: Passport_LucasBell
+  m_Name: Passport_ElenaVoss
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
   hasOfficialMark: 1
   documentType: 1
-  passportNumber: ATZ-3921
-  firstName: Lucas
-  lastName: Bale
-  country: 0
+  passportNumber: REP-1201
+  firstName: Elena
+  lastName: Voss
+  country: 5
   dateOfBirth:
-    day: 9
-    month: 8
-    year: 1958
-  sex: 0
-  issuingCity: 1
+    day: 8
+    month: 12
+    year: 1962
+  sex: 1
+  issuingCity: 15
   expirationDate:
-    day: 10
-    month: 11
-    year: 1988
+    day: 18
+    month: 8
+    year: 1987
   portrait: {fileID: 0}

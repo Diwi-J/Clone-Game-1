@@ -14,19 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 0
-  passportNumber: 
-  firstName: 
-  lastName: 
+  documentType: 1
+  passportNumber: ATZ-1012
+  firstName: Elise
+  lastName: Shaw
   country: 0
   dateOfBirth:
-    day: 1
-    month: 1
-    year: 0
-  sex: 0
-  issuingCity: 0
+    day: 13
+    month: 9
+    year: 1963
+  sex: 1
+  issuingCity: 12
   expirationDate:
-    day: 1
-    month: 1
-    year: 0
+    day: 7
+    month: 11
+    year: 1989
   portrait: {fileID: 0}

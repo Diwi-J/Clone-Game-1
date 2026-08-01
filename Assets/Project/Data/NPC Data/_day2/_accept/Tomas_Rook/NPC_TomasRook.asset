@@ -10,23 +10,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_MayaQuinn
+  m_Name: NPC_TomasRook
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Maya
-  lastName: Quinn
+  firstName: Tomas
+  lastName: Rook
   dateOfBirth:
-    day: 30
-    month: 1
-    year: 1960
-  nationality: 0
-  sex: 1
+    day: 17
+    month: 4
+    year: 1952
+  nationality: 1
+  sex: 0
   portrait: {fileID: 0}
-  entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1011
-  idNumber: MQ-346783
+  entryPurpose: 5
+  intendedStayDays: 30
+  passportNumber: ATG-3014
+  idNumber: 
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: b15a193fe013f0e4a9087b4969f5bc73, type: 2}
+  passportDocument: {fileID: 11400000, guid: e9bae13ff39e82447b0f9f98fbe09028, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}

@@ -9,24 +9,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdd2037fb3c73004ab30a9be015f39a6, type: 3}
-  m_Name: Passport_LucasBell
-  m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
+  m_Script: {fileID: 11500000, guid: c4616fe491696a84a8fed50a60358d0a, type: 3}
+  m_Name: ID_LucasBell
+  m_EditorClassIdentifier: Assembly-CSharp::IDDocumentData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 1
-  passportNumber: ATZ-3921
-  firstName: Lucas
-  lastName: Bale
+  documentType: 0
+  idNumber: LB-571403
   country: 0
+  districtIssued: 0
+  firstName: Lucas
+  lastName: Bell
+  portrait: {fileID: 0}
   dateOfBirth:
     day: 9
     month: 8
     year: 1958
-  sex: 0
-  issuingCity: 1
-  expirationDate:
-    day: 10
-    month: 11
-    year: 1988
-  portrait: {fileID: 0}
