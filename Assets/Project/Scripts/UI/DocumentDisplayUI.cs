@@ -27,9 +27,7 @@ namespace Core.UI
         [SerializeField] private TMP_Text firstNameIDText;
         [SerializeField] private TMP_Text lastNameIDText;
         [SerializeField] private TMP_Text districtIssuedText;
-        [SerializeField] private TMP_Text idCountryText;
         [SerializeField] private TMP_Text idDobText;
-        [SerializeField] private TMP_Text idNumberText;
         [SerializeField] private Image idPortraitImage;
 
         [Header("Work Permit UI Panel")]
@@ -179,11 +177,8 @@ namespace Core.UI
 
             if (districtIssuedText != null) districtIssuedText.text = $"District Issued: {idCard.districtIssued}";
 
-            if (idCountryText != null) idCountryText.text = $"Country: {idCard.country}";
-
             if (idDobText != null) idDobText.text = $"Date of Birth: {idCard.dateOfBirth}";
 
-            if (idNumberText != null) idNumberText.text = $"ID Number: {idCard.idNumber}";
 
             if (idPortraitImage != null)
             {

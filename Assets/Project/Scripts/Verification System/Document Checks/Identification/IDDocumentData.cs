@@ -8,8 +8,6 @@ using UnityEngine;
 public class IDDocumentData : IdentificationDocumentData
 {
     [Header("ID Information")]
-    public string idNumber;
-    public Nationality country;
     public IssuingCity districtIssued;
     public string firstName;
     public string lastName;

@@ -125,22 +125,8 @@ public class DocumentVerification : MonoBehaviour
                 "ID Card date of birth does not match."
             );
         }
-
-        if (idCard.country != npc.nationality)
-        {
-            discrepancies.Add(
-                "ID Card nationality does not match."
-            );
-        }
-
-        // Only use this if IDDocumentData contains idNumber.
-        if (idCard.idNumber != npc.idNumber)
-        {
-            discrepancies.Add(
-                "ID Card number does not match."
-            );
-        }
     }
+
 
     // ENTRY PERMIT
     private void VerifyEntryPermit(
