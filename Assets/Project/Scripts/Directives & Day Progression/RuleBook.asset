@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebf57440c11bec4189b2724e2ae197d, type: 3}
+  m_Name: RuleBook
+  m_EditorClassIdentifier: Assembly-CSharp::Rulebook
+  directives:
+  - day: 1
+    directiveTypes: 000000000600000001000000
+    bodyText: 'Citizens of Artotzka require <b>Identification.</b>
+
+
+      All foreigners
+      require an <b>Entry permit</b> and <b>Supporting documents</b>
+
+
+'
+  - day: 3
+    directiveTypes: 00000000060000000100000004000000
+    bodyText: 'Citizens of Artotzka require <b>Identification.</b>
+
+
+      All foreigners
+      require an <b>Entry permit</b> and <b>Supporting documents</b>
+
+
+      Immediately
+      exterminate any Skinwalker '
+  - day: 3
+    directiveTypes: 000000000600000001000000020000000300000004000000
+    bodyText: 'Citizens of Artotzka require <b>Identification.</b>
+
+
+      All foreigners
+      require an <b>Entry permit</b> and <b>Supporting documents</b>
+
+
+      Reject
+      any Applicant with a history of <b>Major Offences</b>
+
+
+      Exterminate any
+      Applicant that is suspected of having been <b>Exposed to a Skinwalker</b>
+
+
+      Immediately
+      <b>exterminate any Skinwalker</b>'
+  passports:
+  - nationality: 1
+    referenceImage: {fileID: 5476631640023070711, guid: b802d7def9400934c944612318845fa1, type: 3}
+    issuingCities: 040000000300000005000000
+    page: 1
+  - nationality: 0
+    referenceImage: {fileID: -1632079839383848446, guid: a25567b27dda15345874eb849a122812, type: 3}
+    issuingCities: 020000000000000001000000
+    page: 2
+  - nationality: 2
+    referenceImage: {fileID: 1898388800253638029, guid: 01c0e033852b1094382107ae1df2aa33, type: 3}
+    issuingCities: 060000000700000008000000
+    page: 3
+  - nationality: 3
+    referenceImage: {fileID: 2678210025204997613, guid: 66ce54011782e144da500469f31bd6bc, type: 3}
+    issuingCities: 090000000a0000000b000000
+    page: 4
+  - nationality: 4
+    referenceImage: {fileID: 2866571053409591284, guid: 9192a3b6a2ddb744fb54620d65a16325, type: 3}
+    issuingCities: 0c0000000d0000000e000000
+    page: 5
+  - nationality: 5
+    referenceImage: {fileID: -670110773629879465, guid: 6f083ddbc9fc6304ab9240bebc55ef3f, type: 3}
+    issuingCities: 0f0000001000000011000000
+    page: 6
+  - nationality: 6
+    referenceImage: {fileID: 5063373058419994929, guid: d7bd30aab84fa34449b440a52d63d064, type: 3}
+    issuingCities: 120000001300000014000000
+    page: 7

@@ -94,6 +94,7 @@ public enum IssuingCity
     // Obristan
     Skal,
     Lorndaz,
+    Mergerous,
 
     // Republia
     TrueGlorian,
