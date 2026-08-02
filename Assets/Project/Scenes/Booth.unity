@@ -5930,7 +5930,7 @@ MonoBehaviour:
   dailyQueues:
   - dayNumber: 1
     applicants:
-    - {fileID: 11400000, guid: e036ebb884a32d0419656a057a773867, type: 2}
+    - {fileID: 11400000, guid: 810603c21554d584bbaac89444e81ace, type: 2}
     - {fileID: 11400000, guid: d27aebb399cfa734fb6037d37533ba5f, type: 2}
   testDay: 1
 --- !u!1 &1118560075

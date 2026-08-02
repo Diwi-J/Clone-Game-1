@@ -18,15 +18,16 @@ MonoBehaviour:
     day: 14
     month: 6
     year: 2022
-  nationality: Meowland
+  nationality: 0
   sex: 1
   portrait: {fileID: 0}
-  heightCm: 168
-  weightCm: 62
   entryPurpose: 1
   intendedStayDays: 30
   passportNumber: p-112233
   isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 5de2b675f30a146499f84fb3402f05f9, type: 2}
   identificationDocument: {fileID: 11400000, guid: 5bb33912375cc8b419709a1b4e8d352f, type: 2}
+  workPermit: {fileID: 11400000, guid: a8f9943ee9dc32841bcd198e8105104d, type: 2}
   entryPermit: {fileID: 11400000, guid: c68398f6c2a10c3418b747553d7c829b, type: 2}
-  supportingDocument: {fileID: 11400000, guid: 266b504e23c509c42ab1d93633272184, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 0332ab5c6c7aa074b98948af0c989195, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 266b504e23c509c42ab1d93633272184, type: 2}
