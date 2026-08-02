@@ -25,6 +25,8 @@ public class NPCData : ScriptableObject
 
     public string passportNumber;
 
+    public string idNumber;
+    
     [Header("NPC Classification")]
     public bool isSkinwalker;
 
