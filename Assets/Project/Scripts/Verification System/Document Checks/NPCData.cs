@@ -15,6 +15,7 @@ public class NPCData : ScriptableObject
 
     [Header("True Appearance")]
     public Sprite portrait;
+    public Color characterTint = Color.white;
 
     [Header("True Entry Information")]
     public EntryPurpose entryPurpose;
@@ -23,8 +24,6 @@ public class NPCData : ScriptableObject
     public int intendedStayDays = 1;
 
     public string passportNumber;
-
-    public string idNumber;
 
     [Header("NPC Classification")]
     public bool isSkinwalker;
