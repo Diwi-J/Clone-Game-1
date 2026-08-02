@@ -115,7 +115,7 @@ namespace Core
             StateMachine.ChangeState(new FinancesStartedState(this));
         }
 
-        /// <summary>This gets called immediatly as soon as the QueueTimer reaches its end</summary>
+        /// <summary>This gets called after the finances has been handled</summary>
         private void HandleDayResolved()
         {
             StateMachine.ChangeState(new DayResolvedState(this));
