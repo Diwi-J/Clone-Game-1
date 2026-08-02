@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_AntonKrane
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Anton
+  lastName: krane
+  dateOfBirth:
+    day: 11
+    month: 11
+    year: 1960
+  nationality: 5
+  sex: 0
+  portrait: {fileID: 0}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: REP-3023
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 0609f2b4b4b6025408f5046d9cad368e, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: f33d44b595ae0d5428f66aaec32af6c5, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 0}

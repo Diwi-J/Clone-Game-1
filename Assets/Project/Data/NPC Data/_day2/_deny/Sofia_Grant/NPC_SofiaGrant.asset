@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_SofiaGrant
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Sofia
+  lastName: Grant
+  dateOfBirth:
+    day: 8
+    month: 8
+    year: 1958
+  nationality: 4
+  sex: 1
+  portrait: {fileID: 0}
+  entryPurpose: 3
+  intendedStayDays: 360
+  passportNumber: OBR-2022
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: ef0136a22d1c8a546b5316b1b56a39d3, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: aa56385ccd09b2542875896c59fe43aa, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 0}
