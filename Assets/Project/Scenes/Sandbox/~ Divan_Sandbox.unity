@@ -4149,20 +4149,19 @@ MonoBehaviour:
   passportPanel: {fileID: 417879219}
   firstNamePassportText: {fileID: 0}
   lastNamePassportText: {fileID: 0}
-  passportCountryText: {fileID: 1660124920}
-  passportDobText: {fileID: 1776298203}
-  passportSexText: {fileID: 114747185}
-  passportNumberText: {fileID: 1776569682}
-  passportExpiryText: {fileID: 486720338}
+  passportCountryText: {fileID: 0}
+  passportDobText: {fileID: 0}
+  passportSexText: {fileID: 0}
+  passportNumberText: {fileID: 0}
+  passportExpiryText: {fileID: 0}
+  passportIssuingCityText: {fileID: 0}
   passportPortraitImage: {fileID: 225199804}
   officialPassportMarkImage: {fileID: 0}
   idPanel: {fileID: 248259113}
   firstNameIDText: {fileID: 0}
   lastNameIDText: {fileID: 0}
   districtIssuedText: {fileID: 0}
-  idCountryText: {fileID: 1223365311}
-  idDobText: {fileID: 512996894}
-  idNumberText: {fileID: 0}
+  idDobText: {fileID: 0}
   idPortraitImage: {fileID: 0}
   workPermitPanel: {fileID: 0}
   workPanelHolderNameText: {fileID: 0}
@@ -4171,9 +4170,9 @@ MonoBehaviour:
   entryPermitPanel: {fileID: 1558272506}
   entryPermitFirstNameText: {fileID: 0}
   entryPermitLastNameText: {fileID: 0}
-  entryPermitPassportNumText: {fileID: 1636318356}
-  entryPermitPurposeText: {fileID: 1252481509}
-  entryPermitEntryByDateText: {fileID: 444609569}
+  entryPermitPassportNumText: {fileID: 0}
+  entryPermitPurposeText: {fileID: 0}
+  entryPermitEntryByDateText: {fileID: 0}
   stayDurationText: {fileID: 0}
   entryPermitSealGraphic: {fileID: 1136437532}
   clearanceDocPanel: {fileID: 0}
@@ -4197,6 +4196,7 @@ MonoBehaviour:
   vaccineIssueDateText: {fileID: 0}
   vaccineValidUntilText: {fileID: 0}
   medicalFacilityText: {fileID: 0}
+  vaccineOfficialMark: {fileID: 0}
 --- !u!114 &1434896220
 MonoBehaviour:
   m_ObjectHideFlags: 0
