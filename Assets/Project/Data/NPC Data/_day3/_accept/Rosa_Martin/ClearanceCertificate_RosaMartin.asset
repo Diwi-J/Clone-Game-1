@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ece33e8bcf54c5d44b9d7d3f96281570, type: 3}
+  m_Name: ClearanceCertificate_RosaMartin
+  m_EditorClassIdentifier: Assembly-CSharp::ClearanceCertificateData
+  isForged: 0
+  hasOfficialMark: 1
+  documentType: 0
+  firstName: Rosa
+  lastName: Martin
+  dateOfBirth:
+    day: 23
+    month: 5
+    year: 1954
+  nationality: 2
+  Photo: {fileID: 0}
+  offences: []
+  issueDate:
+    day: 1
+    month: 3
+    year: 1985
+  validUntil:
+    day: 1
+    month: 4
+    year: 1985

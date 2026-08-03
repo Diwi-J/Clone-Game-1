@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_RosaMartin
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Rosa
+  lastName: Martin
+  dateOfBirth:
+    day: 23
+    month: 5
+    year: 1954
+  nationality: 2
+  sex: 1
+  portrait: {fileID: 0}
+  entryPurpose: 5
+  intendedStayDays: 30
+  passportNumber: IMP-6098
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 06d2405081e5e3446b3f03ac2bdadce5, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: f723d45005c1eb247a0c20a2cd29a550, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 5107ab559d56a6e4dbe4c3360d70d82e, type: 2}
+  vaccineCertification: {fileID: 0}
