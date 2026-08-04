@@ -4349,7 +4349,7 @@ MonoBehaviour:
   previousPageButton: {fileID: 68309179}
   sealsGridContainer: {fileID: 14298389}
   sealItemPrefab: {fileID: 2318890103842901819, guid: edbb21dd7e0cfa1418de734adeb726ee, type: 3}
-  panelRoot: {fileID: 0}
+  panelRoot: {fileID: 924662370}
 --- !u!114 &634050959
 MonoBehaviour:
   m_ObjectHideFlags: 0
