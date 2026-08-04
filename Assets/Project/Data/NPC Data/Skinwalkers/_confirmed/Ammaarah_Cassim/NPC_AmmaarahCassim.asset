@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_IsaacHale
+  m_Name: NPC_AmmaarahCassim
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Isaac
-  lastName: Hale
+  firstName: Ammaarah
+  lastName: Cassim
   dateOfBirth:
-    day: 5
-    month: 6
-    year: 1955
+    day: 26
+    month: 11
+    year: 1959
   nationality: 0
-  sex: 0
+  sex: 1
   portrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
-  passportNumber: ATZ-1003
+  passportNumber: ATZ-8934
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: 3d362609980e9db4dbf67f78ed5f6202, type: 2}
-  identificationDocument: {fileID: 11400000, guid: 50106a65e6a9ca347a5255767767beac, type: 2}
+  passportDocument: {fileID: 11400000, guid: 3b877fbe9507a374ea4b3dc7c2ec27d3, type: 2}
+  identificationDocument: {fileID: 11400000, guid: 4f1c936bba46b744abcf5f26f80fdfb2, type: 2}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}
-  clearanceDocument: {fileID: 0}
-  vaccineCertification: {fileID: 0}
+  clearanceDocument: {fileID: 11400000, guid: 7575014d7290ac94ca031b928d3f2b9c, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 57d38fc46373b2540bf1030789b274e8, type: 2}

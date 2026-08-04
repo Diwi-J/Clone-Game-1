@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_IsaacHale
+  m_Name: NPC_HanaMercer
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Isaac
-  lastName: Hale
+  firstName: Hana
+  lastName: Mercer
   dateOfBirth:
-    day: 5
-    month: 6
-    year: 1955
+    day: 29
+    month: 9
+    year: 1962
   nationality: 0
-  sex: 0
+  sex: 1
   portrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
-  passportNumber: ATZ-1003
+  passportNumber: ATZ-8943
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: 3d362609980e9db4dbf67f78ed5f6202, type: 2}
-  identificationDocument: {fileID: 11400000, guid: 50106a65e6a9ca347a5255767767beac, type: 2}
+  passportDocument: {fileID: 11400000, guid: a0468cebc5c881d47866e4f4cf925e41, type: 2}
+  identificationDocument: {fileID: 11400000, guid: 853502f961980ca45be84cfdc6af9896, type: 2}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}
   clearanceDocument: {fileID: 0}
-  vaccineCertification: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: b322541fc6ec77c4b9c38e3561a231f1, type: 2}

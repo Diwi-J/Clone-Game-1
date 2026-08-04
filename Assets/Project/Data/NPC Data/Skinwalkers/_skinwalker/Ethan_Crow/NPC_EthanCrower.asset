@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_IsaacHale
+  m_Name: NPC_EthanCrower
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Isaac
-  lastName: Hale
+  firstName: Ethan
+  lastName: Crow
   dateOfBirth:
-    day: 5
-    month: 6
-    year: 1955
+    day: 6
+    month: 9
+    year: 1957
   nationality: 0
   sex: 0
   portrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
-  passportNumber: ATZ-1003
-  isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: 3d362609980e9db4dbf67f78ed5f6202, type: 2}
-  identificationDocument: {fileID: 11400000, guid: 50106a65e6a9ca347a5255767767beac, type: 2}
+  passportNumber: ATZ-8854
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: 7d16b58f6b9a1074db9af1569cc836d6, type: 2}
+  identificationDocument: {fileID: 11400000, guid: a5bfbb6b1531de943803557b78cbf0cd, type: 2}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}
   clearanceDocument: {fileID: 0}
-  vaccineCertification: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: 1ef2fcd931197254a8b6d215866af2e6, type: 2}

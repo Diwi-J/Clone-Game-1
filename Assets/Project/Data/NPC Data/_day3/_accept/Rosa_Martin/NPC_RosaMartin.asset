@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
-  m_Name: NPC_IsaacHale
+  m_Name: NPC_RosaMartin
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
-  firstName: Isaac
-  lastName: Hale
+  firstName: Rosa
+  lastName: Martin
   dateOfBirth:
-    day: 5
-    month: 6
-    year: 1955
-  nationality: 0
-  sex: 0
+    day: 23
+    month: 5
+    year: 1954
+  nationality: 2
+  sex: 1
   portrait: {fileID: 0}
-  entryPurpose: 0
-  intendedStayDays: 1
-  passportNumber: ATZ-1003
+  entryPurpose: 5
+  intendedStayDays: 30
+  passportNumber: IMP-6098
   isSkinwalker: 0
-  passportDocument: {fileID: 11400000, guid: 3d362609980e9db4dbf67f78ed5f6202, type: 2}
-  identificationDocument: {fileID: 11400000, guid: 50106a65e6a9ca347a5255767767beac, type: 2}
+  passportDocument: {fileID: 11400000, guid: 06d2405081e5e3446b3f03ac2bdadce5, type: 2}
+  identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
-  entryPermit: {fileID: 0}
-  clearanceDocument: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: f723d45005c1eb247a0c20a2cd29a550, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 5107ab559d56a6e4dbe4c3360d70d82e, type: 2}
   vaccineCertification: {fileID: 0}

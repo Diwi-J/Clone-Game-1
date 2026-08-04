@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_DevonPike
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Devon
+  lastName: Pike
+  dateOfBirth:
+    day: 30
+    month: 11
+    year: 1955
+  nationality: 4
+  sex: 0
+  portrait: {fileID: 0}
+  entryPurpose: 1
+  intendedStayDays: 30
+  passportNumber: OBR-8432
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 8cb28007cc8293c4aaf11e91e21f9fe1, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: 99c7966cac7805241b47db6bd4ff47c9, type: 2}
+  entryPermit: {fileID: 11400000, guid: 94b922e95b7dc35409150b481e8aec59, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: 248e1b9c7d4b71c47b7b335cb5650e64, type: 2}
