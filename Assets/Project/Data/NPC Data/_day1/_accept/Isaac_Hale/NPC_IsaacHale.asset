@@ -24,10 +24,9 @@ MonoBehaviour:
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-1003
-  idNumber: IH-550605
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: 3d362609980e9db4dbf67f78ed5f6202, type: 2}
-  identificationDocument: {fileID: 0}
+  identificationDocument: {fileID: 11400000, guid: 50106a65e6a9ca347a5255767767beac, type: 2}
   workPermit: {fileID: 0}
   entryPermit: {fileID: 0}
   clearanceDocument: {fileID: 0}

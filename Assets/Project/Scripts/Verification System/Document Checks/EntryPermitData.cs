@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(
     fileName = "EntryPermit_",
@@ -18,6 +19,8 @@ public class EntryPermitData : DocumentData
     public int durationDays = 1;
 
     public GameDate entryByDate;
+
+    public Image seal;
 
     public string FullName => $"{firstName} {lastName}";
 }
