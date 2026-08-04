@@ -18,12 +18,13 @@ MonoBehaviour:
     day: 19
     month: 7
     year: 1944
-  nationality: 0
+  nationality: 1
   sex: 0
   portrait: {fileID: -1025569883, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
-  passportNumber: ATZ-1008
+  passportNumber: ATG-1008
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: 55f5163daa7ee2346bca96a1341bca54, type: 2}
   identificationDocument: {fileID: 0}

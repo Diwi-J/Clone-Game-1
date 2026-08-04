@@ -23,7 +23,7 @@ MonoBehaviour:
     day: 10
     month: 11
     year: 1951
-  sex: 0
+  sex: 1
   issuingCity: 0
   expirationDate:
     day: 8

@@ -15,10 +15,10 @@ MonoBehaviour:
   isForged: 0
   hasOfficialMark: 1
   documentType: 1
-  passportNumber: ATZ-1008
+  passportNumber: ATG-1008
   firstName: Jonah
   lastName: Wells
-  country: 0
+  country: 1
   dateOfBirth:
     day: 19
     month: 7

@@ -75,6 +75,9 @@ namespace Core.UI
         [SerializeField] private TMP_Text medicalFacilityText;
         [SerializeField] private Image vaccineOfficialMark;
 
+        [Header("Booth Appearance")]
+        [SerializeField] private GameObject boothPanel;
+        [SerializeField] private Image boothPortraitImage;
 
         /// <summary>
         /// Update desk UI documents for a new incoming NPC.
@@ -104,6 +107,7 @@ namespace Core.UI
             SetupEntryPermit(npc);
             SetupClearanceCertificate(npc);
             SetupVaccineCertificate(npc);
+            SetupBoothPortrait(npc);
         }
 
         public void ClearAllDocuments()
@@ -119,6 +123,35 @@ namespace Core.UI
             if (clearanceDocPanel != null) clearanceDocPanel.SetActive(false);
 
             if (vaccineDocPanel != null) vaccineDocPanel.SetActive(false);
+
+            if (boothPanel != null) boothPanel.SetActive(false);
+        }
+
+        private void SetupBoothPortrait(NPCData npc)
+        {
+            if (boothPanel == null)
+                return;
+
+            if (npc == null)
+            {
+                boothPanel.SetActive(false);
+                return;
+            }
+
+            boothPanel.SetActive(true);
+
+            if (boothPortraitImage != null)
+            {
+                // Use the special booth portrait when one is assigned.
+                // Otherwise, fall back to the NPC's normal portrait.
+                Sprite portraitToDisplay =
+                    npc.boothPortrait != null
+                        ? npc.boothPortrait
+                        : npc.portrait;
+
+                boothPortraitImage.sprite = portraitToDisplay;
+                boothPortraitImage.enabled = portraitToDisplay != null;
+            }
         }
 
         private void SetupPassport(NPCData npc)

@@ -21,6 +21,7 @@ MonoBehaviour:
   nationality: 4
   sex: 1
   portrait: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 1305862339, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 3
   intendedStayDays: 360
   passportNumber: OBR-1876
