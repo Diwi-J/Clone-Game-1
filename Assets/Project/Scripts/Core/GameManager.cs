@@ -106,6 +106,7 @@ namespace Core
         public void BeginQueue()
         {
             StateMachine.ChangeState(new QueueStartedState(this, Data.QueueDurationSeconds));
+            Debug.Log("Queue has Begun");
         }
 
         /// <summary>Call this when the queue's timer runs out (see QueueStartedState.Tick()).</summary>

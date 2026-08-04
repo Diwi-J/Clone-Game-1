@@ -32,6 +32,7 @@ namespace Core.StateMachine.States
         public void Enter()
         {
             gm.Data.CurrentPhase = DayPhase.Queue;
+            timeRemaining = duration;
             Debug.Log("[QueueState] Entered.");
 
             // Queue System owner: start spawning/pulling applicants when you see this event.
@@ -40,11 +41,11 @@ namespace Core.StateMachine.States
 
         public void Tick()
         {
-            //timeRemaining -= Time.deltaTime;
-            //if (timeRemaining <= 0f)
-            //{
-            //    gm.EndQueue();
-            //}
+            timeRemaining -= Time.deltaTime;
+            if (timeRemaining <= 0f)
+            {
+                gm.EndQueue();
+            }
         }
 
         public void Exit()

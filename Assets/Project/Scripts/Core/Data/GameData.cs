@@ -38,7 +38,7 @@ namespace Core.Data
         [Header("Progression")]
         public int CurrentDay = 1;
         public DayPhase CurrentPhase = DayPhase.MainMenu;
-        public float QueueDurationSeconds = 300f;
+        public float QueueDurationSeconds = 20f;
 
         [Header("Economy")]
         public int CurrentMoneyAmount = 0;
