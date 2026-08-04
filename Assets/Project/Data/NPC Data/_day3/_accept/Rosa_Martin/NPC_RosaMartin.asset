@@ -20,7 +20,7 @@ MonoBehaviour:
     year: 1954
   nationality: 2
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: -1199424848, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 5
   intendedStayDays: 30
   passportNumber: IMP-6098

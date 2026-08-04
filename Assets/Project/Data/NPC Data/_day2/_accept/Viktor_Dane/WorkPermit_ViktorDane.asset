@@ -21,3 +21,4 @@ MonoBehaviour:
     day: 1
     month: 6
     year: 1986
+  seal: {fileID: 198487923158779503, guid: abc91cf041ced484e9223db4748cbd3e, type: 3}

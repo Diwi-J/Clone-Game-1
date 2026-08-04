@@ -29,4 +29,4 @@ MonoBehaviour:
     day: 30
     month: 8
     year: 1988
-  portrait: {fileID: 0}
+  portrait: {fileID: 8633881525917383573, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

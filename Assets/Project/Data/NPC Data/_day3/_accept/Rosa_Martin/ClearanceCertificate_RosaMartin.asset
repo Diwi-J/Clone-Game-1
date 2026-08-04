@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 5
     year: 1954
   nationality: 2
-  Photo: {fileID: 0}
+  Photo: {fileID: -1199424848, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences: []
   issueDate:
     day: 1
@@ -32,3 +32,4 @@ MonoBehaviour:
     day: 1
     month: 4
     year: 1985
+  seal: {fileID: -3545791249894751699, guid: 9e0668e7d881289458943506cafe76c5, type: 3}

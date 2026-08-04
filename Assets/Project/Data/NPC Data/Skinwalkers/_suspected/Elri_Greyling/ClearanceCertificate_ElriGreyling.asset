@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 8
     year: 1962
   nationality: 2
-  Photo: {fileID: 0}
+  Photo: {fileID: -1464319790, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences:
   - offenceName: Trying to sacrifice someone
     category: 1
@@ -38,3 +38,4 @@ MonoBehaviour:
     day: 12
     month: 7
     year: 1985
+  seal: {fileID: 0}

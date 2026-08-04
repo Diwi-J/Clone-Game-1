@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1949
   nationality: 0
   sex: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: -1284558257, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-1002
-  idNumber: MR-490922
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: 1305d44603beefa49bdc1db36f2bf82d, type: 2}
   identificationDocument: {fileID: 11400000, guid: 345484a8ed38d1e4ca9d8aece0e779b0, type: 2}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 0
+  documentType: 1
   passportNumber: KOL-7893
   firstName: Carla
   lastName: Mendes
@@ -29,4 +29,4 @@ MonoBehaviour:
     day: 11
     month: 5
     year: 1988
-  portrait: {fileID: 0}
+  portrait: {fileID: 2030363746, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

@@ -20,7 +20,7 @@ MonoBehaviour:
     year: 1955
   nationality: 4
   sex: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: -1774740052, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 1
   intendedStayDays: 30
   passportNumber: OBR-8432

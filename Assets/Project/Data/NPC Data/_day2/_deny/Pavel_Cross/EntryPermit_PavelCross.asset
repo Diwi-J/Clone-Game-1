@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EntryPermit_PavelCross
   m_EditorClassIdentifier: Assembly-CSharp::EntryPermitData
   isForged: 0
-  hasOfficialMark: 1
+  hasOfficialMark: 0
   firstName: Pavel
   lastName: Cross
   passportNumber: UN-4089
@@ -23,3 +23,4 @@ MonoBehaviour:
     day: 16
     month: 6
     year: 1985
+  seal: {fileID: -1897952233, guid: 5986e4662792cef4d810a667cdb511b4, type: 3}

@@ -10,6 +10,7 @@ public class WorkPermitDocumentData : IdentificationDocumentData
     public string holderName;
     public string workField;
     public GameDate validUntil;
+    public Sprite seal;
     public override string HolderName => holderName;
 
     // sets document type as Identification so dont have to manually set it

@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 7
     year: 1956
   nationality: 0
-  Photo: {fileID: 0}
+  Photo: {fileID: -333556610, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences:
   - offenceName: Spitting on a homeless man
     category: 1
@@ -42,3 +42,4 @@ MonoBehaviour:
     day: 6
     month: 5
     year: 1985
+  seal: {fileID: -3545791249894751699, guid: 9e0668e7d881289458943506cafe76c5, type: 3}

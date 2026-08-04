@@ -20,7 +20,7 @@ MonoBehaviour:
     year: 1962
   nationality: 0
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: 998126562, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-8943

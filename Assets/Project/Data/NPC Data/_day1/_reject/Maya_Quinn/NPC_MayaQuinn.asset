@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1960
   nationality: 0
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: 46446102, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-1011
-  idNumber: MQ-346783
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: b15a193fe013f0e4a9087b4969f5bc73, type: 2}
   identificationDocument: {fileID: 0}

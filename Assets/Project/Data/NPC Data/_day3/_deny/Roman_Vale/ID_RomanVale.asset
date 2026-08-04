@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 1
   firstName: Roman
   lastName: Vale
-  portrait: {fileID: 0}
+  portrait: {fileID: -333556610, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 7
     month: 7

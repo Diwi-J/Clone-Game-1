@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 0
   firstName: Ammaarah
   lastName: Cassim
-  portrait: {fileID: 0}
+  portrait: {fileID: 46446102, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 26
     month: 11

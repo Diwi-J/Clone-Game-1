@@ -20,7 +20,7 @@ public class EntryPermitData : DocumentData
 
     public GameDate entryByDate;
 
-    public Image seal;
+    public Sprite seal;
 
     public string FullName => $"{firstName} {lastName}";
 }

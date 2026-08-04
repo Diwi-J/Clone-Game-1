@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EntryPermit_HenryMoss
   m_EditorClassIdentifier: Assembly-CSharp::EntryPermitData
   isForged: 0
-  hasOfficialMark: 1
+  hasOfficialMark: 0
   firstName: Henry
   lastName: Moss
   passportNumber: ATG-8894
@@ -23,3 +23,4 @@ MonoBehaviour:
     day: 18
     month: 11
     year: 1986
+  seal: {fileID: -8532953226191207630, guid: 5986e4662792cef4d810a667cdb511b4, type: 3}

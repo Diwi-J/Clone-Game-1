@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ClearanceCertificate_CarlaMendes
   m_EditorClassIdentifier: Assembly-CSharp::ClearanceCertificateData
   isForged: 0
-  hasOfficialMark: 1
+  hasOfficialMark: 0
   documentType: 0
   firstName: Carla
   lastName: Mendes
@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 8
     year: 1955
   nationality: 3
-  Photo: {fileID: 0}
+  Photo: {fileID: 2030363746, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences:
   - offenceName: Petty Theft
     category: 1
@@ -34,3 +34,4 @@ MonoBehaviour:
     day: 29
     month: 5
     year: 1985
+  seal: {fileID: 841145853730633048, guid: 3a80b14f4602c6a4fb6fbfb435132d74, type: 3}

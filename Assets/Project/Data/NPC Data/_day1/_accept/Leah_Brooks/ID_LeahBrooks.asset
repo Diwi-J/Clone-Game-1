@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 1
   firstName: Leah
   lastName: Brooks
-  portrait: {fileID: 0}
+  portrait: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 18
     month: 11
