@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_OscarHale
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Oscar
+  lastName: Hale
+  dateOfBirth:
+    day: 15
+    month: 5
+    year: 1955
+  nationality: 0
+  sex: 0
+  portrait: {fileID: 0}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: ATZ-4897
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: b6a0266aa0798db45bd241679a48a983, type: 2}
+  identificationDocument: {fileID: 11400000, guid: fd5334e10c86ac344b491dccfa858d63, type: 2}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 0}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: 236968da2890ccd429684ceded06c358, type: 2}
