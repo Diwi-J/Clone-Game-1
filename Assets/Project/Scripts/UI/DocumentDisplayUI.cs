@@ -36,6 +36,7 @@ namespace Core.UI
         [SerializeField] private TMP_Text workPanelHolderNameText;
         [SerializeField] private TMP_Text workFieldText;
         [SerializeField] private TMP_Text validUntilDate;
+        [SerializeField] private Image workPermitseal;
 
 
         [Header("Entry Permit UI Panel")]
@@ -250,6 +251,8 @@ namespace Core.UI
             if (workFieldText != null) workFieldText.text = workPermit.workField.ToString();
 
             if (validUntilDate != null) validUntilDate.text = workPermit.validUntil.ToString();
+
+            if (workPermitseal != null) workPermitseal.sprite = workPermit.seal;
         }
 
         private void SetupEntryPermit(NPCData npc)
@@ -283,6 +286,7 @@ namespace Core.UI
             {
                 entryPermitSealGraphic.enabled =
                     permit.hasOfficialMark;
+                entryPermitSealGraphic.sprite = permit.seal;
             }
         }
 
@@ -417,6 +421,7 @@ namespace Core.UI
             if (offenceMarkImage != null)
             {
                 offenceMarkImage.enabled = clearance.hasOfficialMark;
+                offenceMarkImage.sprite = clearance.seal;
             }
         }
     }
