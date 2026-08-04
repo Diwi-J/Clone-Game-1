@@ -14,26 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Rulebook
   directives:
   - day: 1
-    directiveTypes: 000000000600000001000000
-    bodyText: 'Citizens of Artotzka require <b>Identification.</b>
+    directiveTypes: 0000000005000000
+    bodyText: '<b>ONLY</b> citizens of Artotzka are allowed entry.
 
 
-      All foreigners
-      require an <b>Entry permit</b> and <b>Supporting documents</b>
+      Citizens
+      of Artotzka require <b>Identification.</b>
+
+
 
 
 '
-  - day: 3
-    directiveTypes: 00000000060000000100000004000000
-    bodyText: 'Citizens of Artotzka require <b>Identification.</b>
-
-
-      All foreigners
-      require an <b>Entry permit</b> and <b>Supporting documents</b>
-
-
-      Immediately
-      exterminate any Skinwalker '
+  - day: 2
+    directiveTypes: 000000000600000004000000
+    bodyText: "Citizens of Artotzka require <b>Identification.</b>\n\nAll foreigners
+      require an <b>Entry permit</b> \n\nImmediately exterminate any Skinwalker "
   - day: 3
     directiveTypes: 000000000600000001000000020000000300000004000000
     bodyText: 'Citizens of Artotzka require <b>Identification.</b>

@@ -79,6 +79,11 @@ namespace Core.UI
         /// <summary>
         /// Update desk UI documents for a new incoming NPC.
         /// </summary>
+
+        private void Start()
+        {
+            ClearAllDocuments();
+        }
         public void DisplayNPCDocuments(NPCData npc)
         {
             Debug.Log(
