@@ -119,6 +119,68 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14298388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14298389}
+  - component: {fileID: 14298390}
+  m_Layer: 0
+  m_Name: SealGridContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &14298389
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14298388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 634050957}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &14298390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14298388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.VerticalLayoutGroup
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 60
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 30
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &68309177
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,6 +1859,7 @@ RectTransform:
   m_Children:
   - {fileID: 868991189}
   - {fileID: 1553776115}
+  - {fileID: 14298389}
   - {fileID: 177931894}
   - {fileID: 2066619864}
   m_Father: {fileID: 994518816}
@@ -1824,6 +1887,8 @@ MonoBehaviour:
   passportImage: {fileID: 1553776116}
   nextPageButton: {fileID: 382210881}
   previousPageButton: {fileID: 68309179}
+  sealsGridContainer: {fileID: 14298389}
+  sealItemPrefab: {fileID: 2318890103842901819, guid: edbb21dd7e0cfa1418de734adeb726ee, type: 3}
   panelRoot: {fileID: 0}
 --- !u!114 &634050959
 MonoBehaviour:
@@ -3066,7 +3131,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -4149,20 +4214,19 @@ MonoBehaviour:
   passportPanel: {fileID: 417879219}
   firstNamePassportText: {fileID: 0}
   lastNamePassportText: {fileID: 0}
-  passportCountryText: {fileID: 1660124920}
-  passportDobText: {fileID: 1776298203}
-  passportSexText: {fileID: 114747185}
-  passportNumberText: {fileID: 1776569682}
-  passportExpiryText: {fileID: 486720338}
+  passportCountryText: {fileID: 0}
+  passportDobText: {fileID: 0}
+  passportSexText: {fileID: 0}
+  passportNumberText: {fileID: 0}
+  passportExpiryText: {fileID: 0}
+  passportIssuingCityText: {fileID: 0}
   passportPortraitImage: {fileID: 225199804}
   officialPassportMarkImage: {fileID: 0}
   idPanel: {fileID: 248259113}
   firstNameIDText: {fileID: 0}
   lastNameIDText: {fileID: 0}
   districtIssuedText: {fileID: 0}
-  idCountryText: {fileID: 1223365311}
-  idDobText: {fileID: 512996894}
-  idNumberText: {fileID: 0}
+  idDobText: {fileID: 0}
   idPortraitImage: {fileID: 0}
   workPermitPanel: {fileID: 0}
   workPanelHolderNameText: {fileID: 0}
@@ -4171,9 +4235,9 @@ MonoBehaviour:
   entryPermitPanel: {fileID: 1558272506}
   entryPermitFirstNameText: {fileID: 0}
   entryPermitLastNameText: {fileID: 0}
-  entryPermitPassportNumText: {fileID: 1636318356}
-  entryPermitPurposeText: {fileID: 1252481509}
-  entryPermitEntryByDateText: {fileID: 444609569}
+  entryPermitPassportNumText: {fileID: 0}
+  entryPermitPurposeText: {fileID: 0}
+  entryPermitEntryByDateText: {fileID: 0}
   stayDurationText: {fileID: 0}
   entryPermitSealGraphic: {fileID: 1136437532}
   clearanceDocPanel: {fileID: 0}
@@ -4197,6 +4261,7 @@ MonoBehaviour:
   vaccineIssueDateText: {fileID: 0}
   vaccineValidUntilText: {fileID: 0}
   medicalFacilityText: {fileID: 0}
+  vaccineOfficialMark: {fileID: 0}
 --- !u!114 &1434896220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5582,7 +5647,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 250, y: -650.0586}
+  m_AnchoredPosition: {x: 250, y: -653.4677}
   m_SizeDelta: {x: 460, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066619865

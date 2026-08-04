@@ -82,3 +82,27 @@ MonoBehaviour:
     referenceImage: {fileID: 5063373058419994929, guid: d7bd30aab84fa34449b440a52d63d064, type: 3}
     issuingCities: 120000001300000014000000
     page: 7
+  sealsPageHeading: Valid Seals
+  validSeals:
+  - sealName: Entry Seal
+    sealImage: {fileID: -3772820635436917644, guid: a43114218b8884e43a80d1ea312d72d0, type: 3}
+  - sealName: MOJ
+    sealImage: {fileID: -3545791249894751699, guid: 9e0668e7d881289458943506cafe76c5, type: 3}
+  - sealName: MOA
+    sealImage: {fileID: 9198320077352637396, guid: 3c2245b8d7fa80f43840aef67f026a78, type: 3}
+  - sealName: MOL
+    sealImage: {fileID: 198487923158779503, guid: abc91cf041ced484e9223db4748cbd3e, type: 3}
+  skinwalkerMainHeading: Skinwalker Information
+  skinwalkerSections:
+  - subHeading: Confirmed SkinWalker Features
+    bulletPoints:
+    - Red Eyes
+    - Blood Splatters (Around the mouth, on Clothes etc.
+    - Open Wounds
+    - Bleeding Nose
+    - Bite Marks
+  - subHeading: Suspected Exposure to Skinwalkers
+    bulletPoints:
+    - Dirt and Grime
+    - Bite Marks
+    - Pale Complection

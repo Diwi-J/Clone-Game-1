@@ -43,6 +43,34 @@ public class PassportEntry
 }
 
 /// <summary>
+/// A single official seal permitted to appear on documents.
+/// </summary>
+[Serializable]
+public class SealEntry
+{
+    [Tooltip("Name of the issuing authority/seal, e.g. 'Ministry of Admission'.")]
+    public string sealName;
+
+    [Tooltip("Image of the official seal.")]
+    public Sprite sealImage;
+}
+
+/// <summary>
+/// One block of the Skinwalker section - a subheading (e.g. "Skinwalker
+/// Features" or "Signs of Possible Exposure") plus its own bullet list.
+/// </summary>
+[Serializable]
+public class SkinwalkerSection
+{
+    [Tooltip("Subheading for this block, e.g. 'Skinwalker Features'.")]
+    public string subHeading;
+
+    [Tooltip("Bullet point lines under this subheading.")]
+    public List<string> bulletPoints = new List<string>();
+}
+
+
+/// <summary>
 /// Master rulebook ScriptableObject. Page 1 is always the current day's
 /// directives; each following page is one country, showing its passport
 /// photo and valid issuing cities.
@@ -61,6 +89,21 @@ public class Rulebook : ScriptableObject
     [Header("Following Pages - Countries")]
     [Tooltip("One entry per country, ordered by page.")]
     public List<PassportEntry> passports = new List<PassportEntry>();
+
+    [Header("Valid Seals Page")]
+    [Tooltip("Heading shown at the top of the seals page.")]
+    public string sealsPageHeading = "Valid Seals";
+
+    [Tooltip("All official seals permitted to appear on documents.")]
+    public List<SealEntry> validSeals = new List<SealEntry>();
+
+    [Header("Skinwalker Information Page")]
+    [Tooltip("Main heading shown at the top of the skinwalker page.")]
+    public string skinwalkerMainHeading = "Skinwalker Information";
+
+    [Tooltip("Subsections (e.g. Features, Signs of Possible Exposure), each with its own bullet list.")]
+    public List<SkinwalkerSection> skinwalkerSections = new List<SkinwalkerSection>();
+
 
     // ---------- Directive helpers ----------
 
