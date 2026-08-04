@@ -21,6 +21,7 @@ public class ClearanceCertificateData : SupportingDocumentData
     [Header("Validity")]
     public GameDate issueDate;
     public GameDate validUntil;
+    public Sprite seal;
     public override string HolderName => $"{firstName} {lastName}";
 
     // default they will have no offences, if they do it will display the highest category of offence

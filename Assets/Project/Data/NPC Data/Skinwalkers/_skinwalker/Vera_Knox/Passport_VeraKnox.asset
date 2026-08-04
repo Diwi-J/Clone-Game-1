@@ -23,10 +23,10 @@ MonoBehaviour:
     day: 10
     month: 11
     year: 1951
-  sex: 0
+  sex: 1
   issuingCity: 0
   expirationDate:
     day: 8
     month: 7
     year: 1985
-  portrait: {fileID: 0}
+  portrait: {fileID: 46446102, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1950
   nationality: 3
   sex: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: -412850131, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 1
   intendedStayDays: 365
   passportNumber: KOL-2015
-  idNumber: 
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: fa6ead588b555e94da7f5876ad96f6af, type: 2}
   identificationDocument: {fileID: 0}

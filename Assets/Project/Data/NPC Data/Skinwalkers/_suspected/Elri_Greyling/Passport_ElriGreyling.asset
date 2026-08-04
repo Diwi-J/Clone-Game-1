@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 0
+  documentType: 1
   passportNumber: IMP-1846
   firstName: Elri
   lastName: Greyling
@@ -29,4 +29,4 @@ MonoBehaviour:
     day: 1
     month: 1
     year: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: -1464319790, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

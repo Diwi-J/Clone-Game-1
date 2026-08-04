@@ -15,6 +15,7 @@ public class NPCData : ScriptableObject
 
     [Header("True Appearance")]
     public Sprite portrait;
+    public Sprite boothPortrait;
 
     [Header("True Entry Information")]
     public EntryPurpose entryPurpose;

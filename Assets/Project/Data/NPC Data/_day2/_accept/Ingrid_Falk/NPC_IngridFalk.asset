@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1964
   nationality: 6
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 1
   intendedStayDays: 180
   passportNumber: UN-3981
-  idNumber: 
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: c9712650a6bf83648bfc97adb70f177f, type: 2}
   identificationDocument: {fileID: 0}

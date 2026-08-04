@@ -36,6 +36,7 @@ namespace Core.UI
         [SerializeField] private TMP_Text workPanelHolderNameText;
         [SerializeField] private TMP_Text workFieldText;
         [SerializeField] private TMP_Text validUntilDate;
+        [SerializeField] private Image workPermitseal;
 
 
         [Header("Entry Permit UI Panel")]
@@ -75,6 +76,9 @@ namespace Core.UI
         [SerializeField] private TMP_Text medicalFacilityText;
         [SerializeField] private Image vaccineOfficialMark;
 
+        [Header("Booth Appearance")]
+        [SerializeField] private GameObject boothPanel;
+        [SerializeField] private Image boothPortraitImage;
 
         /// <summary>
         /// Update desk UI documents for a new incoming NPC.
@@ -104,6 +108,7 @@ namespace Core.UI
             SetupEntryPermit(npc);
             SetupClearanceCertificate(npc);
             SetupVaccineCertificate(npc);
+            SetupBoothPortrait(npc);
         }
 
         public void ClearAllDocuments()
@@ -119,6 +124,35 @@ namespace Core.UI
             if (clearanceDocPanel != null) clearanceDocPanel.SetActive(false);
 
             if (vaccineDocPanel != null) vaccineDocPanel.SetActive(false);
+
+            if (boothPanel != null) boothPanel.SetActive(false);
+        }
+
+        private void SetupBoothPortrait(NPCData npc)
+        {
+            if (boothPanel == null)
+                return;
+
+            if (npc == null)
+            {
+                boothPanel.SetActive(false);
+                return;
+            }
+
+            boothPanel.SetActive(true);
+
+            if (boothPortraitImage != null)
+            {
+                // Use the special booth portrait when one is assigned.
+                // Otherwise, fall back to the NPC's normal portrait.
+                Sprite portraitToDisplay =
+                    npc.boothPortrait != null
+                        ? npc.boothPortrait
+                        : npc.portrait;
+
+                boothPortraitImage.sprite = portraitToDisplay;
+                boothPortraitImage.enabled = portraitToDisplay != null;
+            }
         }
 
         private void SetupPassport(NPCData npc)
@@ -217,6 +251,8 @@ namespace Core.UI
             if (workFieldText != null) workFieldText.text = workPermit.workField.ToString();
 
             if (validUntilDate != null) validUntilDate.text = workPermit.validUntil.ToString();
+
+            if (workPermitseal != null) workPermitseal.sprite = workPermit.seal;
         }
 
         private void SetupEntryPermit(NPCData npc)
@@ -250,6 +286,7 @@ namespace Core.UI
             {
                 entryPermitSealGraphic.enabled =
                     permit.hasOfficialMark;
+                entryPermitSealGraphic.sprite = permit.seal;
             }
         }
 
@@ -384,6 +421,7 @@ namespace Core.UI
             if (offenceMarkImage != null)
             {
                 offenceMarkImage.enabled = clearance.hasOfficialMark;
+                offenceMarkImage.sprite = clearance.seal;
             }
         }
     }

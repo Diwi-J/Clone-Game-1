@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VaccineCertificationData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 0
+  documentType: 1
   firstName: Ethan
   lastName: Crowe
   dateOfBirth:
@@ -33,4 +33,4 @@ MonoBehaviour:
     month: 7
     year: 1985
   facility: East Grestin Medical
-  seal: {fileID: 0}
+  seal: {fileID: 9198320077352637396, guid: 3c2245b8d7fa80f43840aef67f026a78, type: 3}

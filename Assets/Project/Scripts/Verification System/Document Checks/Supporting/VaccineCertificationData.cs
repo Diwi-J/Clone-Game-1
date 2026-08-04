@@ -26,7 +26,7 @@ public class VaccineCertificationData : SupportingDocumentData
 
     [Header("Medical")]
     public string facility;
-    public Image seal;
+    public Sprite seal;
 
     public override string HolderName => $"{firstName} {lastName}";
 

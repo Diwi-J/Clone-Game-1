@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 0
   firstName: Talia
   lastName: Stone
-  portrait: {fileID: 0}
+  portrait: {fileID: -1199424848, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 1
     month: 1

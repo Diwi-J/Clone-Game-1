@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 1
     year: 1950
   nationality: 1
-  Photo: {fileID: 0}
+  Photo: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences:
   - offenceName: Murder
     category: 2
@@ -34,3 +34,4 @@ MonoBehaviour:
     day: 4
     month: 7
     year: 1985
+  seal: {fileID: 0}

@@ -44,13 +44,17 @@ public class DayManager : MonoBehaviour
         int currentDay =
             GameManager.Instance.Data.CurrentDay;
 
-        List<DirectiveType> directives =
+        CurrentDirectives =
             Directives.GetDirectives(currentDay);
 
         GameManager.Instance.Data.CurrentDirectives =
-            directives;
+            CurrentDirectives;
 
-        Debug.Log($"Loaded {directives.Count} directives for Day {currentDay}.");
+        Debug.Log(
+            $"[DayManager] Loaded {CurrentDirectives.Count} " +
+            $"directives for Day {currentDay}: " +
+            $"{string.Join(", ", CurrentDirectives)}"
+        );
     }
 
     private void HandleDayEndStarted()

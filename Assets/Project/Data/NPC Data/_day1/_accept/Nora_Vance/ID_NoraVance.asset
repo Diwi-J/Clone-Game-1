@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 2
   firstName: Nora
   lastName: Vance
-  portrait: {fileID: 0}
+  portrait: {fileID: 998126562, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 18
     month: 2

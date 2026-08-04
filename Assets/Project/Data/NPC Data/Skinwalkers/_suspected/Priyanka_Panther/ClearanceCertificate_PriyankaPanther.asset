@@ -22,7 +22,7 @@ MonoBehaviour:
     month: 2
     year: 1963
   nationality: 4
-  Photo: {fileID: 0}
+  Photo: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   offences:
   - offenceName: 'Punching a kid '
     category: 1
@@ -40,3 +40,4 @@ MonoBehaviour:
     day: 8
     month: 7
     year: 1985
+  seal: {fileID: -3545791249894751699, guid: 9e0668e7d881289458943506cafe76c5, type: 3}

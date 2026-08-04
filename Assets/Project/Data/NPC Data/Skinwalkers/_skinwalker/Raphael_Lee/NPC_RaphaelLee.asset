@@ -20,7 +20,8 @@ MonoBehaviour:
     year: 1960
   nationality: 2
   sex: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: -1203543011, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 1
   intendedStayDays: 60
   passportNumber: IMP-7479

@@ -20,7 +20,8 @@ MonoBehaviour:
     year: 1960
   nationality: 5
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: -218981042, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 1467867618, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 5
   intendedStayDays: 5
   passportNumber: REP-1749

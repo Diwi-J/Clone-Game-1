@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 2
   firstName: Oscar
   lastName: Hale
-  portrait: {fileID: 0}
+  portrait: {fileID: 765119479, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 15
     month: 5

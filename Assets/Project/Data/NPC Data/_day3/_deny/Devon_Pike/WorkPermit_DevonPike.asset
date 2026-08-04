@@ -14,10 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WorkPermitDocumentData
   isForged: 0
   hasOfficialMark: 1
-  documentType: 0
+  documentType: 2
   holderName: Devon Pike
   workField: Logistics
   validUntil:
     day: 6
     month: 12
     year: 1985
+  seal: {fileID: 9198320077352637396, guid: 3c2245b8d7fa80f43840aef67f026a78, type: 3}

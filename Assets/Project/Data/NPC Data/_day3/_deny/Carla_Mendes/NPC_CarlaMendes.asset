@@ -20,7 +20,7 @@ MonoBehaviour:
     year: 1955
   nationality: 3
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: 2030363746, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 5
   intendedStayDays: 7
   passportNumber: KOL-7893

@@ -18,7 +18,7 @@ MonoBehaviour:
   districtIssued: 0
   firstName: Caleb
   lastName: North
-  portrait: {fileID: 0}
+  portrait: {fileID: 1797770341, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   dateOfBirth:
     day: 21
     month: 6

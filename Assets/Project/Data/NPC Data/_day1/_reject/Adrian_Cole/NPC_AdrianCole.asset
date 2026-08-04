@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1956
   nationality: 1
   sex: 0
-  portrait: {fileID: 0}
+  portrait: {fileID: 8633881525917383573, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 5
   intendedStayDays: 10
   passportNumber: ATG-2007
-  idNumber: 
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: 9626b57430b9de54cb4f411ad58e3eec, type: 2}
   identificationDocument: {fileID: 0}

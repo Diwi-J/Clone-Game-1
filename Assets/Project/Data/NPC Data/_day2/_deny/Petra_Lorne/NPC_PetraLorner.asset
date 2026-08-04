@@ -20,11 +20,10 @@ MonoBehaviour:
     year: 1959
   nationality: 2
   sex: 1
-  portrait: {fileID: 0}
+  portrait: {fileID: -1557996586, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
   entryPurpose: 0
   intendedStayDays: 21
   passportNumber: IMP-5978
-  idNumber: 
   isSkinwalker: 0
   passportDocument: {fileID: 11400000, guid: 869522690b2eb38448b7439a8e8e60d9, type: 2}
   identificationDocument: {fileID: 0}
