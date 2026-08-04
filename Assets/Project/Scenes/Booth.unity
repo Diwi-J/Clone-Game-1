@@ -7059,8 +7059,52 @@ MonoBehaviour:
   dailyQueues:
   - dayNumber: 1
     applicants:
-    - {fileID: 11400000, guid: 810603c21554d584bbaac89444e81ace, type: 2}
+    - {fileID: 11400000, guid: 5b49a2305ec00f84691030425b9ef727, type: 2}
+    - {fileID: 11400000, guid: e036ebb884a32d0419656a057a773867, type: 2}
     - {fileID: 11400000, guid: d27aebb399cfa734fb6037d37533ba5f, type: 2}
+    - {fileID: 11400000, guid: 11e06106bf02b5548a13f2acc4e4a732, type: 2}
+    - {fileID: 11400000, guid: 1e9311f419c5c1644af36027db187249, type: 2}
+    - {fileID: 11400000, guid: e4305817948bd95449b8884bc244cc84, type: 2}
+    - {fileID: 11400000, guid: 9246529a500dbe548b04d234f96cd6b2, type: 2}
+    - {fileID: 11400000, guid: 23336417d1e4a56458afa8741e1e605b, type: 2}
+    - {fileID: 11400000, guid: 954ea3427b79cd94ebbd08105ce56b79, type: 2}
+    - {fileID: 11400000, guid: 1cbce62573b476e42851aeaa504f6558, type: 2}
+    - {fileID: 11400000, guid: ff982af47a136854392051c62cf46d3c, type: 2}
+    - {fileID: 11400000, guid: 11f9a5011359c5e4aa6c45d10af5104a, type: 2}
+  - dayNumber: 2
+    applicants:
+    - {fileID: 11400000, guid: 4755ebb0e736ee04297dfbadf6448519, type: 2}
+    - {fileID: 11400000, guid: 749ea96501072764fa6916720baee1b4, type: 2}
+    - {fileID: 11400000, guid: ac32c0eacacb82c43ab26d93cd1eae7c, type: 2}
+    - {fileID: 11400000, guid: a4fd152dc8bf98b429a738d1a4b8db3a, type: 2}
+    - {fileID: 11400000, guid: 9c563fa1ac6dea345b24b492c573eb81, type: 2}
+    - {fileID: 11400000, guid: 22bfd215bfadd6f4bbe0d5c7371b1d04, type: 2}
+    - {fileID: 11400000, guid: 7a40d7b09c17bf545830e5f6ea15dd9b, type: 2}
+    - {fileID: 11400000, guid: 53f1f6564fca7824b97df5a4a19af5fa, type: 2}
+    - {fileID: 11400000, guid: a9cded5805c866c48a73d133c8bec4f4, type: 2}
+    - {fileID: 11400000, guid: cbf671f55586d9643bfcf77eff4ac67b, type: 2}
+    - {fileID: 11400000, guid: 1464c454530cc054287ece5a80f6e343, type: 2}
+    - {fileID: 11400000, guid: 0a18251aded68ad41b4fccd20ae90539, type: 2}
+    - {fileID: 11400000, guid: 3ab5ebc81599025449acec36b60bf483, type: 2}
+    - {fileID: 11400000, guid: a591ae52260f1c14c8e7e2486d5f0afd, type: 2}
+    - {fileID: 11400000, guid: 574d7399331274148bca9ae171ce4af8, type: 2}
+  - dayNumber: 3
+    applicants:
+    - {fileID: 11400000, guid: 04c3e019eec829648ae553dfe29753e1, type: 2}
+    - {fileID: 11400000, guid: 8fcae70d637c33744b1800c62ee8f08b, type: 2}
+    - {fileID: 11400000, guid: c40ddb10de7ed7342aff18873ebc50eb, type: 2}
+    - {fileID: 11400000, guid: 9ccc10f72aeef264f847ca41ffb28f8a, type: 2}
+    - {fileID: 11400000, guid: 9c6ec0e923fcfda4e88911fe4afce8c4, type: 2}
+    - {fileID: 11400000, guid: 1822b2387adcfef438578e59de50acd5, type: 2}
+    - {fileID: 11400000, guid: bf89fa9d3804643448e3d9029166cc5c, type: 2}
+    - {fileID: 11400000, guid: 7dfaeab6e90af374694b3de93a67fdd9, type: 2}
+    - {fileID: 11400000, guid: 658fef9b3dd87ff4ebbaab1b0509d9a1, type: 2}
+    - {fileID: 11400000, guid: 3a9ef95b98d07eb438f25c37c0e6feb5, type: 2}
+    - {fileID: 11400000, guid: 5dc495f197bc85e4ba99723ddfd1391d, type: 2}
+    - {fileID: 11400000, guid: 996b0f6d10868d34c911ed65c178d8ad, type: 2}
+    - {fileID: 11400000, guid: f2ee325f3918ae8418f8f949e73c8104, type: 2}
+    - {fileID: 11400000, guid: 2f9f22c9ab6b57f44b2540d29d75860f, type: 2}
+    - {fileID: 11400000, guid: 1464c454530cc054287ece5a80f6e343, type: 2}
   testDay: 1
 --- !u!1 &1118560075
 GameObject:
