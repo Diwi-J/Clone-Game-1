@@ -84,7 +84,6 @@ namespace Core
 
         private void Start()
         {
-            // Boots straight into the main menu.
             StateMachine.ChangeState(new DayStartedState(this));
         }
 

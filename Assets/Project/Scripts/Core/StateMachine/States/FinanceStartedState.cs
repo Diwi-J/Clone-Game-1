@@ -35,7 +35,6 @@ namespace Core.StateMachine.States
 
         public void Exit()
         {
-            gm.Data.CurrentDay++;
             Debug.Log("[FinanceStartedState] Exited.");
         }
     }

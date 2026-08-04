@@ -18,6 +18,8 @@ namespace Core.StateMachine.States
             var data = gm.Data;
             data.CurrentPhase = DayPhase.DayEnd;
 
+            Debug.Log($"[DayResolvedState] Entered. Day {gm.Data.CurrentDay} Ends.");
+
             if (data.MissedRentToday)
             {
                 gm.TriggerGameOver("Could not pay rent.");
@@ -34,7 +36,10 @@ namespace Core.StateMachine.States
             gm.StartNewDay();
         }
         public void Tick() { }
-        public void Exit() { }
+        public void Exit() 
+        {
+            Debug.Log("[DayresolvedState] Exited - handing off to DayStart.");
+        }
     }
 }
 

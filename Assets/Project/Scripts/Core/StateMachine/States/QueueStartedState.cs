@@ -40,11 +40,11 @@ namespace Core.StateMachine.States
 
         public void Tick()
         {
-            timeRemaining -= Time.deltaTime;
-            if (timeRemaining <= 0f)
-            {
-                gm.EndQueue();
-            }
+            //timeRemaining -= Time.deltaTime;
+            //if (timeRemaining <= 0f)
+            //{
+            //    gm.EndQueue();
+            //}
         }
 
         public void Exit()
