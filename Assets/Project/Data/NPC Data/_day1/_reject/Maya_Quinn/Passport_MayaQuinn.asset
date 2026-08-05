@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd2037fb3c73004ab30a9be015f39a6, type: 3}
   m_Name: Passport_MayaQuinn
   m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
-  isForged: 0
+  isForged: 1
   hasOfficialMark: 0
   documentType: 1
   passportNumber: ATZ-1011

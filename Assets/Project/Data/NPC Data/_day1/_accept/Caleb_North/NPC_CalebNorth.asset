@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NPC_CalebNorth
   m_EditorClassIdentifier: Assembly-CSharp::NPCData
   firstName: Caleb
-  lastName: Hale
+  lastName: North
   dateOfBirth:
     day: 21
     month: 6
@@ -21,6 +21,7 @@ MonoBehaviour:
   nationality: 0
   sex: 0
   portrait: {fileID: 1797770341, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 0}
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-1005

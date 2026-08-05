@@ -105,6 +105,14 @@ public class DocumentVerification : MonoBehaviour
         {
             return;
         }
+        bool isCitizen =
+        npc.nationality == dayManager.HomeCountry;
+
+        bool idRequired =
+       isCitizen &&
+       dayManager.HasDirective(
+           DirectiveType.IdentificationRequired
+       );
 
         if (idCard.HolderName != npc.FullName)
         {
@@ -125,6 +133,8 @@ public class DocumentVerification : MonoBehaviour
                 "ID Card date of birth does not match."
             );
         }
+
+
     }
 
 
