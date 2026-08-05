@@ -46,20 +46,25 @@ namespace Core.UI
 
         private void OnEnable()
         {
-            if (GameManager.Instance != null &&
-                GameManager.Instance.OnQueueStarted != null)
+            if (GameManager.Instance != null)
             {
-                GameManager.Instance.OnQueueStarted.OnEventRaised +=
-                    HandleQueueStarted;
+                if (GameManager.Instance.OnQueueStarted != null)
+                    GameManager.Instance.OnQueueStarted.OnEventRaised += HandleQueueStarted;
+
+                if (GameManager.Instance.OnQueueTimeExpired != null)
+                    GameManager.Instance.OnQueueTimeExpired.OnEventRaised += FinishCurrentQueue;
             }
         }
+
         private void OnDisable()
         {
-            if (GameManager.Instance != null &&
-                GameManager.Instance.OnQueueStarted != null)
+            if (GameManager.Instance != null)
             {
-                GameManager.Instance.OnQueueStarted.OnEventRaised -=
-                    HandleQueueStarted;
+                if (GameManager.Instance.OnQueueStarted != null)
+                    GameManager.Instance.OnQueueStarted.OnEventRaised -= HandleQueueStarted;
+
+                if (GameManager.Instance.OnQueueTimeExpired != null)
+                    GameManager.Instance.OnQueueTimeExpired.OnEventRaised -= FinishCurrentQueue;
             }
         }
 

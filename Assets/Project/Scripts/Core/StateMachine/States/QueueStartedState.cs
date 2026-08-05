@@ -44,6 +44,7 @@ namespace Core.StateMachine.States
             timeRemaining -= Time.deltaTime;
             if (timeRemaining <= 0f)
             {
+                gm.OnQueueTimeExpired?.Raise();
                 gm.EndQueue();
             }
         }
