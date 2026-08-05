@@ -25,7 +25,7 @@ MonoBehaviour:
   entryPurpose: 0
   intendedStayDays: 1
   passportNumber: ATZ-8934
-  isSkinwalker: 0
+  isSkinwalker: 1
   passportDocument: {fileID: 11400000, guid: 3b877fbe9507a374ea4b3dc7c2ec27d3, type: 2}
   identificationDocument: {fileID: 11400000, guid: 4f1c936bba46b744abcf5f26f80fdfb2, type: 2}
   workPermit: {fileID: 0}

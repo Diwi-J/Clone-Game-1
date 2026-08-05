@@ -25,7 +25,7 @@ MonoBehaviour:
   entryPurpose: 1
   intendedStayDays: 12
   passportNumber: UN-7469
-  isSkinwalker: 0
+  isSkinwalker: 1
   passportDocument: {fileID: 11400000, guid: 205362a7f84804c4c96d0040922b4ee1, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 11400000, guid: 8d13ecb2673bdf749860508f10b12742, type: 2}

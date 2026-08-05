@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65dba2d22fbbc694eaacc77dc2b7074c, type: 3}
   m_Name: EntryPermit_PetraLorne
   m_EditorClassIdentifier: Assembly-CSharp::EntryPermitData
-  isForged: 0
-  hasOfficialMark: 1
+  isForged: 1
+  hasOfficialMark: 0
   firstName: Petra
   lastName: Lorne
   passportNumber: IMP-5978

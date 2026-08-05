@@ -18,7 +18,7 @@ MonoBehaviour:
   passportNumber: KOL-2015
   firstName: Viktor
   lastName: Dane
-  country: 0
+  country: 3
   dateOfBirth:
     day: 25
     month: 1

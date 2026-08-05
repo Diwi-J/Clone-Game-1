@@ -21,6 +21,7 @@ MonoBehaviour:
   nationality: 1
   sex: 0
   portrait: {fileID: 2137704429, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 0}
   entryPurpose: 5
   intendedStayDays: 30
   passportNumber: ATG-3014
@@ -28,6 +29,6 @@ MonoBehaviour:
   passportDocument: {fileID: 11400000, guid: e9bae13ff39e82447b0f9f98fbe09028, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
-  entryPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: a5c755312299e4848b1962000a63d0fc, type: 2}
   clearanceDocument: {fileID: 0}
   vaccineCertification: {fileID: 0}

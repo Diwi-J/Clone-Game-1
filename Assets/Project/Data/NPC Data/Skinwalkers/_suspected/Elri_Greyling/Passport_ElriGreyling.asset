@@ -20,13 +20,13 @@ MonoBehaviour:
   lastName: Greyling
   country: 2
   dateOfBirth:
-    day: 1
-    month: 1
-    year: 0
+    day: 22
+    month: 8
+    year: 1962
   sex: 0
   issuingCity: 0
   expirationDate:
-    day: 1
-    month: 1
-    year: 0
+    day: 4
+    month: 7
+    year: 1985
   portrait: {fileID: -1464319790, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

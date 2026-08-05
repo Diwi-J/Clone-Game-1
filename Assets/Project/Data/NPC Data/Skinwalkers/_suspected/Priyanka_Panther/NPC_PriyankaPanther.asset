@@ -25,7 +25,7 @@ MonoBehaviour:
   entryPurpose: 3
   intendedStayDays: 360
   passportNumber: OBR-1876
-  isSkinwalker: 0
+  isSkinwalker: 1
   passportDocument: {fileID: 11400000, guid: 7f142b57003d84e41b41dd1cfd8a891d, type: 2}
   identificationDocument: {fileID: 0}
   workPermit: {fileID: 0}
