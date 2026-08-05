@@ -57,6 +57,9 @@ namespace Core
         [Tooltip("Raised whenever FamilyHealth changes, via OnFamilyHealthChanged. PayLoad = new value.")]
         public IntEventChannelSO OnFamilyHealthChanged;
 
+        [Tooltip("Raised when the queue's timer runs out, right before the state machine leaves the Queue phase.")]
+        public VoidEventChannelSO OnQueueTimeExpired;
+
         public GameStateMachine StateMachine { get; private set; }
 
         private void Awake()

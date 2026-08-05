@@ -1203,9 +1203,9 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
-      propertyPath: Data.CurrentDay
-      value: 3
-      objectReference: {fileID: 0}
+      propertyPath: OnQueueTimeExpired
+      value: 
+      objectReference: {fileID: 11400000, guid: b3d8af33701dfdb40bfc3a0f5116b1dd, type: 2}
     - target: {fileID: 8026037847846837763, guid: 0a184d4012625334cbcd2fd8c99b41c8, type: 3}
       propertyPath: Data.QueueDurationSeconds
       value: 300
@@ -7091,6 +7091,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 53f1f6564fca7824b97df5a4a19af5fa, type: 2}
     - {fileID: 11400000, guid: a9cded5805c866c48a73d133c8bec4f4, type: 2}
     - {fileID: 11400000, guid: cbf671f55586d9643bfcf77eff4ac67b, type: 2}
+    - {fileID: 11400000, guid: 1464c454530cc054287ece5a80f6e343, type: 2}
     - {fileID: 11400000, guid: 0a18251aded68ad41b4fccd20ae90539, type: 2}
     - {fileID: 11400000, guid: 3ab5ebc81599025449acec36b60bf483, type: 2}
     - {fileID: 11400000, guid: a591ae52260f1c14c8e7e2486d5f0afd, type: 2}
