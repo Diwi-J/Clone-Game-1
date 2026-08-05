@@ -18,7 +18,7 @@ namespace Core.StateMachine.States
             var data = gm.Data;
             data.CurrentPhase = DayPhase.DayEnd;
 
-            Debug.Log($"[DayResolvedState] Entered. Day {gm.Data.CurrentDay} Ends.");
+            Debug.Log($"[DayResolvedState] Entered. Day {gm.Data.CurrentDay - 1} Ends.");
 
             if (data.MissedRentToday)
             {
@@ -32,7 +32,6 @@ namespace Core.StateMachine.States
             }
 
             data.ResetDailyCounters();
-            data.CurrentDay++;
             gm.StartNewDay();
         }
         public void Tick() { }
