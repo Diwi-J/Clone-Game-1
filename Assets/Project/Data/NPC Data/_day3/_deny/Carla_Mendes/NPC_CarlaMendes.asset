@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_CarlaMendes
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Carla
+  lastName: Mendes
+  dateOfBirth:
+    day: 17
+    month: 8
+    year: 1955
+  nationality: 3
+  sex: 1
+  portrait: {fileID: 2030363746, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 5
+  intendedStayDays: 7
+  passportNumber: KOL-7893
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 710ee3a64914083488ed16e71e306d18, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: 473e58dc69d679a4da676842829846de, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 931fc20ab184ec2499a2725dfbb9bcc7, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 2f52da5338ae17247b1c30f4320917c3, type: 2}

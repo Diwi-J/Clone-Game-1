@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd2037fb3c73004ab30a9be015f39a6, type: 3}
+  m_Name: Passport_CalebNorth
+  m_EditorClassIdentifier: Assembly-CSharp::PassportDocumentData
+  isForged: 0
+  hasOfficialMark: 1
+  documentType: 1
+  passportNumber: ATZ-1005
+  firstName: Caleb
+  lastName: North
+  country: 0
+  dateOfBirth:
+    day: 21
+    month: 6
+    year: 1954
+  sex: 0
+  issuingCity: 2
+  expirationDate:
+    day: 31
+    month: 12
+    year: 1988
+  portrait: {fileID: 1797770341, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}

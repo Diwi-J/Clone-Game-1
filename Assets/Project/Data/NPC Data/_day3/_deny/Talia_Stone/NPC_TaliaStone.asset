@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_TaliaStone
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Talia
+  lastName: Stone
+  dateOfBirth:
+    day: 1
+    month: 1
+    year: 1960
+  nationality: 0
+  sex: 1
+  portrait: {fileID: -1199424848, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: ATZ-3327
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 74f5bb567c8cadf47ba0d8b6d4bf6364, type: 2}
+  identificationDocument: {fileID: 11400000, guid: 74974eecacda62a4f89e4a3ad4e7700a, type: 2}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 0}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: 7c5ca7f83372c954d84536b912bfd6ab, type: 2}

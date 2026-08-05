@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_ViktorDane
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Viktor
+  lastName: Dane
+  dateOfBirth:
+    day: 25
+    month: 1
+    year: 1950
+  nationality: 3
+  sex: 0
+  portrait: {fileID: -412850131, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 1
+  intendedStayDays: 365
+  passportNumber: KOL-2015
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: fa6ead588b555e94da7f5876ad96f6af, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: e84c2368ceb09fc48832a7c40c995e38, type: 2}
+  entryPermit: {fileID: 11400000, guid: 9d9dd9503ed107049aed5ff79bedb897, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 0}

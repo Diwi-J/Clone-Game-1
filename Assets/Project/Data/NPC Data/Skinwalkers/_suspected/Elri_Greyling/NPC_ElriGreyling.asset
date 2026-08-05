@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_ElriGreyling
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Elri
+  lastName: Greyling
+  dateOfBirth:
+    day: 22
+    month: 8
+    year: 1962
+  nationality: 2
+  sex: 1
+  portrait: {fileID: -1464319790, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: -487218865, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 1
+  intendedStayDays: 21
+  passportNumber: IMP-1846
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: 942b361487c1c364b974970437139f57, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: 82ec0b52680675c429728bcea337ead2, type: 2}
+  entryPermit: {fileID: 11400000, guid: 58973eaf224cf694dbfeba81ebe7edfa, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 9807eb8c7ab591e4fbb82067b6c0cae1, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 7428922cddf05734a8bc7ad7e1bfc12a, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e97728af477e20945a8181d5494d5963, type: 3}
+  m_Name: WorkPermit_DevonPike
+  m_EditorClassIdentifier: Assembly-CSharp::WorkPermitDocumentData
+  isForged: 0
+  hasOfficialMark: 1
+  documentType: 2
+  holderName: Devon Pike
+  workField: Logistics
+  validUntil:
+    day: 6
+    month: 12
+    year: 1985
+  seal: {fileID: 9198320077352637396, guid: 3c2245b8d7fa80f43840aef67f026a78, type: 3}

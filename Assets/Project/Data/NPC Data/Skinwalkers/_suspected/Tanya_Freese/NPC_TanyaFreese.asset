@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_TanyaFreese
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Tanya
+  lastName: Freese
+  dateOfBirth:
+    day: 16
+    month: 11
+    year: 1960
+  nationality: 5
+  sex: 1
+  portrait: {fileID: -218981042, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 1467867618, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 5
+  intendedStayDays: 5
+  passportNumber: REP-1749
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: 52dbbe134e128a8489f33a343afae302, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: 492225f11f90acb48832b23b61ed5ed1, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: b6962bc408368704bb19f379b2e05d35, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: eef05ab6317142d43b0d54033cfc2b1b, type: 2}

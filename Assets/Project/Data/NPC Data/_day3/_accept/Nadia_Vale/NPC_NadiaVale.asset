@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_NadiaVale
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Nadia
+  lastName: Vale
+  dateOfBirth:
+    day: 12
+    month: 12
+    year: 1957
+  nationality: 3
+  sex: 1
+  portrait: {fileID: 46446102, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 0
+  intendedStayDays: 14
+  passportNumber: KOL-5027
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 8700bb0fd54ac694c8b1bb3d69d80ea5, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 11400000, guid: 80d6da41cc290d5408cb054dd4ea5b8b, type: 2}
+  clearanceDocument: {fileID: 0}
+  vaccineCertification: {fileID: 11400000, guid: 04ce2bd28ca41de4d9edcab7e8e54102, type: 2}

@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_AmmaarahCassim
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Ammaarah
+  lastName: Cassim
+  dateOfBirth:
+    day: 26
+    month: 11
+    year: 1959
+  nationality: 0
+  sex: 1
+  portrait: {fileID: 46446102, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 1512955550, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: ATZ-8934
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: 3b877fbe9507a374ea4b3dc7c2ec27d3, type: 2}
+  identificationDocument: {fileID: 11400000, guid: 4f1c936bba46b744abcf5f26f80fdfb2, type: 2}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 0}
+  clearanceDocument: {fileID: 11400000, guid: 7575014d7290ac94ca031b928d3f2b9c, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 57d38fc46373b2540bf1030789b274e8, type: 2}

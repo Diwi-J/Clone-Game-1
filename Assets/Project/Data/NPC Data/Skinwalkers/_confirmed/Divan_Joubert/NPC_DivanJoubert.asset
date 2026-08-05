@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_DivanJoubert
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Divan
+  lastName: Joubert
+  dateOfBirth:
+    day: 3
+    month: 12
+    year: 1956
+  nationality: 6
+  sex: 0
+  portrait: {fileID: 765119479, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  boothPortrait: {fileID: 992957634, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 1
+  intendedStayDays: 12
+  passportNumber: UN-7469
+  isSkinwalker: 1
+  passportDocument: {fileID: 11400000, guid: 205362a7f84804c4c96d0040922b4ee1, type: 2}
+  identificationDocument: {fileID: 0}
+  workPermit: {fileID: 11400000, guid: 8d13ecb2673bdf749860508f10b12742, type: 2}
+  entryPermit: {fileID: 11400000, guid: 90b71284405cb0c46ae8c3b5d457cbea, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 5e7e05321261f4d4385a207159f9b606, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 98c0ef1a1e5364544897b61c195fc2a1, type: 2}

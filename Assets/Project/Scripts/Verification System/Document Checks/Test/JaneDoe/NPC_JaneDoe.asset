@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_JaneDoe
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: 'Jane '
+  lastName: Doe
+  dateOfBirth:
+    day: 14
+    month: 6
+    year: 2022
+  nationality: 0
+  sex: 1
+  portrait: {fileID: 0}
+  entryPurpose: 1
+  intendedStayDays: 30
+  passportNumber: p-112233
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: 5de2b675f30a146499f84fb3402f05f9, type: 2}
+  identificationDocument: {fileID: 11400000, guid: 5bb33912375cc8b419709a1b4e8d352f, type: 2}
+  workPermit: {fileID: 11400000, guid: a8f9943ee9dc32841bcd198e8105104d, type: 2}
+  entryPermit: {fileID: 11400000, guid: c68398f6c2a10c3418b747553d7c829b, type: 2}
+  clearanceDocument: {fileID: 11400000, guid: 0332ab5c6c7aa074b98948af0c989195, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: 266b504e23c509c42ab1d93633272184, type: 2}

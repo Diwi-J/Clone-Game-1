@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ea5102411c708d4bb09b53b6d9e421f, type: 3}
+  m_Name: NPC_RomanVale
+  m_EditorClassIdentifier: Assembly-CSharp::NPCData
+  firstName: Roman
+  lastName: Vale
+  dateOfBirth:
+    day: 7
+    month: 7
+    year: 1956
+  nationality: 0
+  sex: 0
+  portrait: {fileID: -333556610, guid: 77cc2e8504f13ef46b5b2669fd75c942, type: 3}
+  entryPurpose: 0
+  intendedStayDays: 1
+  passportNumber: ATZ-3674
+  isSkinwalker: 0
+  passportDocument: {fileID: 11400000, guid: de43e1d1589c1cd45ad91845d67d1f9b, type: 2}
+  identificationDocument: {fileID: 11400000, guid: df2a1f797eb215647aaac6012511ee9d, type: 2}
+  workPermit: {fileID: 0}
+  entryPermit: {fileID: 0}
+  clearanceDocument: {fileID: 11400000, guid: 6b1e6e3a0352c6548b83100b52e1e741, type: 2}
+  vaccineCertification: {fileID: 11400000, guid: d34e3d05dd172854f93ad81a8614935f, type: 2}

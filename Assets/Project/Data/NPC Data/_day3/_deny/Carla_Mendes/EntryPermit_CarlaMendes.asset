@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65dba2d22fbbc694eaacc77dc2b7074c, type: 3}
+  m_Name: EntryPermit_CarlaMendes
+  m_EditorClassIdentifier: Assembly-CSharp::EntryPermitData
+  isForged: 0
+  hasOfficialMark: 1
+  firstName: Carla
+  lastName: Mendes
+  passportNumber: KOL-7893
+  purpose: 5
+  durationDays: 7
+  entryByDate:
+    day: 30
+    month: 6
+    year: 1985
+  seal: {fileID: -3772820635436917644, guid: a43114218b8884e43a80d1ea312d72d0, type: 3}
